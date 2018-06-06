@@ -1,21 +1,24 @@
 ---
-title             : "The title"
-shorttitle        : "Title"
+title             : "Final Project Proposal - Group 1, course CSDA1000SUMA18"
+shorttitle        : "Final Project Proposal"
 
 author: 
-  - name          : "First Author"
+  - name          : "Viviane Adohouannon"
     affiliation   : "1"
-    corresponding : yes    # Define only one corresponding author
-    address       : "Postal address"
-    email         : "my@email.com"
-  - name          : "Ernst-August Doelle"
-    affiliation   : "1,2"
+  - name          : "Kate Alexander"
+    affiliation   : "1"
+  - name          : "Juan Arangote"
+    affiliation   : "1"
+  - name          : "Dian Azbel"
+    affiliation   : "1"
+  - name          : "Vinayak Baburaj"
+    affiliation   : "1"
+  - name          : "Igor Baranov"
+    affiliation   : "1"
 
 affiliation:
   - id            : "1"
-    institution   : "Wilhelm-Wundt-University"
-  - id            : "2"
-    institution   : "Konstanz Business School"
+    institution   : "York University School of Continious Studies"
 
 author_note: |
   Add complete departmental affiliations for each author here. Each new line herein must be indented, like this line.
@@ -38,7 +41,7 @@ lineno            : yes
 mask              : no
 
 class             : "man"
-output            : papaja::apa6_word
+output            : papaja::apa6_pdf
 ---
 
 ```{r load_packages, include = FALSE}
@@ -50,9 +53,9 @@ library("papaja")
 set.seed(42)
 ```
 
+# Introduction
 
-
-# Methods
+# Proposed plan
 We report how we determined our sample size, all data exclusions (if any), all manipulations, and all measures in the study. <!-- 21-word solution (Simmons, Nelson & Simonsohn, 2012; retrieved from http://ssrn.com/abstract=2160588) -->
 
 ## Participants
@@ -65,9 +68,9 @@ We report how we determined our sample size, all data exclusions (if any), all m
 We used `r cite_r("r-references.bib")` for all our analyses.
 
 
-# Results
+# Cost/benefit analysis
 
-# Discussion
+# Conclusion
 
 
 \newpage
