@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 https://www.degruyter.com/view/j/eng.2016.6.issue-1/eng-2016-0059/eng-2016-0059.xml
+=======
+http://stat-computing.org/dataexpo/2009/the-data.html
+>>>>>>> 6998247f103227a7b3926085e3e967ff177d9c1a
