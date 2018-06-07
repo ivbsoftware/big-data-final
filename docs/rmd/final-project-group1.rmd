@@ -52,11 +52,24 @@ library("papaja")
 # Seed for random number generation
 set.seed(42)
 ```
+# Abstract
+What are the effect of the different airlines performance on airport gate utilization. 
 
 # Introduction
 
 # Proposed plan
-We report how we determined our sample size, all data exclusions (if any), all manipulations, and all measures in the study. <!-- 21-word solution (Simmons, Nelson & Simonsohn, 2012; retrieved from http://ssrn.com/abstract=2160588) -->
+Airline performance – explain what performance means:
+Performance of Gate/ airline?
+- Number of flights
+- Number of travellers
+- Number of delays coming in / going out
+- Number of Cancellation
+
+## Potential Risks
+
+What are the threats to validity of the model?
+Look for Research papers of capacity or optimizations at airport levels
+
 
 ## Participants
 
@@ -69,6 +82,7 @@ We used `r cite_r("r-references.bib")` for all our analyses.
 
 
 # Cost/benefit analysis
+(Regression model)
 
 # Conclusion
 
