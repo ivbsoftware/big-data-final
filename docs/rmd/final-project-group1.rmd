@@ -37,7 +37,7 @@ figsintext        : no
 figurelist        : no
 tablelist         : no
 footnotelist      : no
-lineno            : yes
+lineno            : no
 mask              : no
 
 class             : "man"
