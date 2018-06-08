@@ -12,3 +12,5 @@ Taken from here: http://stat-computing.org/dataexpo/2009/
 - How does the number of people flying between different locations change over time?
 - How well does weather predict plane delays?
 - Can you detect cascading failures as delays in one airport create delays in others? Are there critical links in the system?
+## Solving Airport Gate Allocation Problem using Simulated Kalman Filter 
+http://umpir.ump.edu.my/11910/
