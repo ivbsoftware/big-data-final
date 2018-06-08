@@ -15,7 +15,7 @@ The following software is required (get the latest, always choose 64-bit version
 > install.packages(c("devtools","afex","lsmeans","MBESS","testthat","rmarkdown","ggplot2","matlib"))
 > devtools::install_github("crsh/papaja")
 ```
-- *Optional:* Download [papaja](https://socialsciences.mcmaster.ca/jfox/Courses/R/ICPSR/R-install-instructions.html) and use it to create new APA-style articles.
+- *Optional:* Download [papaja](https://github.com/crsh/papaja) and use it to create new APA-style articles.
 
 ## Compiling the big-final-data report
 Assuming that you downloaded a *[big-final-data](https://github.com/ivbsoftware/big-data-final)* repository from Github:
