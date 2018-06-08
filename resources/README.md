@@ -6,3 +6,4 @@
 #### - [Airline On-Time Performance Reports](https://www.flightstats.com/company/monthly-performance-reports/airlines/)
 #### - [Optimizing gate assignments at airport terminals](https://www.sciencedirect.com/science/article/pii/S0965856498000056?via%3Dihub)
 #### - [Airport Gate Assignment: New Model and Implementation](https://pdfs.semanticscholar.org/c43e/d93dce9e2be1c3649a525b67d4f3345ab31c.pdf) *(d93dce9e2be1c3649a525b67d4f3345ab31c.pdf)*
+#### - [THE AIRPORT GATE ASSIGNMENT PROBLEM](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.5.5375&rep=rep1&type=pdf) *(10.1.1.5.5375.pdf)*
