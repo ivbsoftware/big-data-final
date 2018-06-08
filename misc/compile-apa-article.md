@@ -10,4 +10,8 @@ The following software is required (get the latest, always choose 64-bit version
 - Install [MikTex](https://miktex.org/) - TeX/LaTeX typesetting system for Microsoft Windows. 
 - Install [PanDoc](http://pandoc.org/getting-started.html) - command-line tool to convert files from one markup format into another.
 - Launch RStudio desktop.
-- 
+- In RStudio  console execute the following:
+```
+> install.packages("devtools")
+> devtools::install_github("crsh/papaja")
+```
