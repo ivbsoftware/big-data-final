@@ -9,4 +9,5 @@
 #### - [THE AIRPORT GATE ASSIGNMENT PROBLEM](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.5.5375&rep=rep1&type=pdf) *(10.1.1.5.5375.pdf)*
 #### - Demand and capacity management in air transportation *(Demand and capacity management in air transportation.pdf)*
 #### - New gate allocation strategies *(New gate allocation strategies.rtf)*
-#### - Solving Airport Date Allocation Problem... *(P117 pg875-885.pdf)*
+#### - Solving Airport Date Allocation Problem using Simulated Kalman Filter *(P117 pg875-885.pdf)*
+#### - [Solving Airport Gate Allocation Problem using Simulated Kalman Filter](http://umpir.ump.edu.my/11910/1/Solving%20Airport%20Gate%20Allocation%20Problem%20using%20Simulated%20Kalman%20Filter.pdf) *(Solving Airport Gate Allocation Problem using Simulated Kalman Filter.pdf)*
