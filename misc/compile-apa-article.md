@@ -11,7 +11,7 @@ The following software is required (get the latest, always choose 64-bit version
 - Launch RStudio desktop.
 - In RStudio  console execute the following:
 ```
-> install.packages(c("devtools","afex","lsmeans","MBESS","testthat","rmarkdown","ggplot2","matlib"))
+> install.packages(c("devtools","afex","lsmeans","MBESS","testthat","rmarkdown","ggplot2","matlib","citr"))
 > devtools::install_github("crsh/papaja")
 ```
 - *Optional:* Download [papaja](https://github.com/crsh/papaja) and use it to create new APA-style articles.
