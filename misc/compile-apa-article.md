@@ -1,6 +1,5 @@
 # Preparing APA Journal Articles in Windows
-Preparation of APA-style article for this project is done with help of [papaja](https://github.com/crsh/papaja) package for RStudio. 
-This document describes the environment and the procedure.
+Preparation of APA-style article for this project is done with help of [papaja](https://github.com/crsh/papaja) package for RStudio. This document describes environment preparation and the the document compilation procedure.
 
 ## Installation
 The following software is required (get the latest, always choose 64-bit versions where there is a choice):
