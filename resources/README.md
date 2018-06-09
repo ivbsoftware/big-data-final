@@ -11,3 +11,7 @@
 #### - New gate allocation strategies *(New gate allocation strategies.rtf)*
 #### - Solving Airport Date Allocation Problem using Simulated Kalman Filter *(P117 pg875-885.pdf)*
 #### - [Solving Airport Gate Allocation Problem using Simulated Kalman Filter](http://umpir.ump.edu.my/11910/1/Solving%20Airport%20Gate%20Allocation%20Problem%20using%20Simulated%20Kalman%20Filter.pdf) *(Solving Airport Gate Allocation Problem using Simulated Kalman Filter.pdf)*
+#### - [Delay Data] (https://www.transtats.bts.gov/OT_Delay/OT_DelayCause1.asp?pn=1)
+#### - [Gate Operational Statistics](https://www.transtats.bts.gov/data_elements.aspx?data=5)
+#### - [Cost of Delay Research] (http://www.eurocontrol.int/sites/default/files/publication/files/european-airline-delay-cost-reference-values-final-report-v3.2.pdf)
+#### - [Airport’s Council International - North American Delay Presentation](https://www.aci-na.org/sites/default/files/eatongarfield-sunday-finance.pdf)
