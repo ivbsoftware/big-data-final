@@ -1,6 +1,5 @@
 # Preparing APA Journal Articles in Windows
-Preparation of APA-style article for this project is done with hel of [papja](https://github.com/crsh/papaja) package for RStudio. 
-This document describes the environment and the procedure.
+Preparation of APA-style article for this project is done with help of [papaja](https://github.com/crsh/papaja) package for RStudio. This document describes environment preparation and the the document compilation procedure.
 
 ## Installation
 The following software is required (get the latest, always choose 64-bit versions where there is a choice):
@@ -12,20 +11,15 @@ The following software is required (get the latest, always choose 64-bit version
 - Launch RStudio desktop.
 - In RStudio  console execute the following:
 ```
-> install.packages("devtools")
+> install.packages(c("devtools","afex","lsmeans","MBESS","testthat","rmarkdown","ggplot2","matlib","citr"))
 > devtools::install_github("crsh/papaja")
 ```
-- *Optional:* Download [papja](https://socialsciences.mcmaster.ca/jfox/Courses/R/ICPSR/R-install-instructions.html) and use it to create new APA-style articles.
+- *Optional:* Download [papaja](https://github.com/crsh/papaja) and use it to create new APA-style articles.
 
 ## Compiling the big-final-data report
-Assuming that you downloaded a *[big-final-data](https://github.com/ivbsoftware/big-data-final)* repository from Github to some *\<project-dir\>*:
+Assuming that you downloaded a *[big-final-data](https://github.com/ivbsoftware/big-data-final)* repository from Github:
 - Launch RStudio desktop.
-- In RStudio terminal (not console!) execute the following:
-```
-$ cd <project-dir>/big-data-final/docs/rmd
-```
-Example:
-```
-$ cd /C/Users/ibaranov/Downloads/big-data-final/docs/rmd
-```
-- Use 'Open' menu to open final-project-group1.rmd rile
+- Use 'Open' menu to open **final-project-group1.rmd** file in RSTudio.
+- In the file window toolbar, click "Knit" down arrow and then click 'Knit to apab6_pdf' item. If the Word formad is required, line **papaja::apa6_pdf** in the **final-project-group1.rmd** file should be changed to **papaja::apa6_word**.
+
+## *To be continued...*
