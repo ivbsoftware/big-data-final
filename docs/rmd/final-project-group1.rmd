@@ -28,13 +28,14 @@ tablelist         : no
 footnotelist      : no
 lineno            : no
 mask              : no
-
+linkcolor         : "blue"
 class             : "man"
 output            : papaja::apa6_pdf
 ---
 
 ```{r load_packages, include = FALSE}
 library("papaja")
+library("ggplot2")
 ```
 
 ```{r analysis_preferences}
@@ -81,6 +82,7 @@ This thesis [@riedel_approach_2006] presents an approach for predicting operatio
 # Proposed Plan
 The focus of this study will be John F. Kennedy Airport in New York.  The study will analyze airline gate operations performance measures over a 1997 to 2008 of publicly available data from bureau of transportation statistics.  These performance measures include the following:
 
+## Model estimation
 Scope of performance measures will be limited on arriving domestic flights as follows:
 - Arrivals
 - Domestic flights
@@ -94,15 +96,14 @@ Apply financial estimates of the performance using available research/data on:
 - Estimate delay costs using European proxy studies adjusted for currency parity between Euro and USD
 - Publicly available blended load factor for airline group (i.e. United Airlines, American Airlines) as opposed to individual airline blended cost.
 
-For the development of this project we are using CRoss-Industry Standard Process for Data Mining (CRISP-DM) was developed by Daimler Chrysler (then Daimler-Benz), SPSS (then ISL) and NCR in 1999.
+## The process
+For the development of this project we are using CRoss-Industry Standard Process for Data Mining (CRISP-DM) (see Figure\ \@ref(fig:crisp-dm)) was developed by Daimler Chrysler (then Daimler-Benz), SPSS (then ISL) and NCR in 1999. Compiling the current proposal document is a part of this process (see Table 1), in it's preparation our team has conducted 2 iteration of the CRISP-DM process.
 
-```{r fig.width=6,echo=FALSE}
-library(png)
-library(grid)
-img <- readPNG("../../images/CRISP-DM_Process_Diagram.png")
- grid.raster(img)
-```
 \newpage
+
+---
+output: pdf_document
+---
 
 | **Phase**|**Task Name**  |**Schedule**  | **Resources** |**Status**
 |--|--|--|--|--|
@@ -135,7 +136,11 @@ img <- readPNG("../../images/CRISP-DM_Process_Diagram.png")
 |  |Final report  | |	||
 |  |Review project|	|	||
 
-\newpage
+Table: Proposed Plan Phases
+
+```{r crisp-dm, fig.cap = "CRISP-DM Process Diagramm.", fig.align = "center", out.width = "\\textwidth", fig.pos = "!h"}
+knitr::include_graphics("../../images/CRISP-DM_Process_Diagram.png", dpi = 800)
+```
 
 # Potential Risks
 Use of assumptions including past performance to predict future performance.  Simplifying cost estimates such as aggregate load factors and blended costs.  Reliance of public data without management inputs.  Data did not exclude normalization of data for abnormal, one-time events.
