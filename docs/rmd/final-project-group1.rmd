@@ -44,7 +44,13 @@ set.seed(42)
 ```
 
 # Abstract
-The search for optimal assignment of flights to gates is of great importance to airport to elimate delays, maintain operations and maximize profits.
+
+An international airport is the most populated and busiest travel area where many people used to move around the world. Gate assignment is one of the most important tasks for airport ground operations, which assigns appropriate airport gates with high efficiency reasonable arrangement. 
+It is important to notice that flights delays and cancellation have a negative impact on airport performance and do not provide an excellent experience to travelers. This study aims to propose a new airport gate assignment method to effectively improve the comprehensive operation capacity and efficiency of John F. Kennedy International airport (JFK airport). 
+It will also help to optimize the number of gate allocated to each airline and improve travelers experience.
+
+
+
 In this paper the focus on the research is to determin the effects of airlines' performance on airport gate utilization on airport financials.
 
  
