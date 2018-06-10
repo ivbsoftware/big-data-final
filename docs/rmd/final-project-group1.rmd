@@ -44,8 +44,10 @@ set.seed(42)
 ```
 
 # Abstract
-What are the effect of the different airlines performance on airport gate utilization. 
-The focus of the research is to determine the effects of airlines' performance on airport gate utilization on airport financials. 
+The search for optimal assignment of flights to gates is of great importance to airport to elimate delays, maintain operations and maximize profits.
+In this paper the focus on the research is to determin the effects of airlines' performance on airport gate utilization on airport financials.
+
+ 
 
 # Introduction
 This study will look at John F. Kennedy International Airport (JFK Airport). JFK Airport is located in the neighborhood of Jamaica in the borough of Queens, in New York, 30km (16 Miles) southeast of Midtown Manhattan.
