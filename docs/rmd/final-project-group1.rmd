@@ -57,11 +57,11 @@ set.seed(42)
 
 # Abstract
 
-What are the effect of the different airlines performance on airport gate utilization. 
+What are the effects of the different airlines performance on airport gate utilization. 
 
 # Introduction
 
-The focus of the research is to determine the effect of airlines' performance on airport gate utilization on airports financials.
+The focus of the research is to determine the effect of airlines' gate utilization performance on airport airport's financials.
 The study will look at John F. Kennedy International Airport (JFK).  JFK Airport is one of the busiest airports in the United States with close 
 to 60 million passengers (2016 data).  More than 90 airlines operate at JFK Airport using the more than 128 gates across six terminals.
 
