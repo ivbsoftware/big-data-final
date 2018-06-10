@@ -47,8 +47,18 @@ set.seed(42)
 What are the effect of the different airlines performance on airport gate utilization. 
 
 # Introduction
-The focus of the research is to determine the effect of airlines' performance on airport gate utilization on airports financials.
-The study will look at John F. Kennedy International Airport (JFK).  JFK Airport is one of the busiest airports in the United States with close to 60 million passengers (2016 data).  More than 90 airlines operate at JFK Airport using the more than 128 gates across six terminals.
+This study will look at John F. Kennedy International Airport (JFK Airport). JFK Airport is located in the neighborhood of Jamaica in the borough of Queens, in New York, 30km (16 Miles) southeast of Midtown Manhattan.
+One of the busiest internation air passenger airports in North America ant the sixth busiest airpots in United States with close to 60 million passengers usint the facility a year (2016 data). 
+The airport features sixt passenger terminals and four runways.
+
+The focus of the research is to determine the effects of airlines' performance on airport gate utilization on airport financials. More than ninty airlines operate at JFK Airport using the more than 128 gates across six terminals.
+
+
+
+
+
+
+
 
 # Competitive Analysis
 In one research [@azmi_solving_2016], in order to solve discrete optimization problem, the SKF algorithm is combined with angle modulated approach. Airport gate allocation problem refers to the search for optimal assignment of flights to gates at an airport. Assignment of flight to gates has become very complex nowadays, especially for a big size airport. In this study, the airport gate allocation problem is solved using a recently introduced angle modulated simulated Kalman filter (AMSKF). The objective of this study is to minimize the total walking distance. A small case study with 14 flights and 16 gates has been chosen. Preliminary results show that SKF is a promising algorithm for solving the airport gate allocation problem.
