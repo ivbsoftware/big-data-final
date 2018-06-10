@@ -42,18 +42,6 @@ library("papaja")
 set.seed(42)
 ```
 
-# Table of Contents
-1. [Abstract](#abstract)
-1. [Introduction](#introduction)
-3. [Competitive Analysis](#competitive-analysis)
-4. [Proposed plan](#proposed-plan)
-4. [Potential Risks](#potential-risks)
-6. [Cost/benefit analysis](#cost)
-6. [Conclusion](#ronclusion)
-7. [References](#references)
-
-\newpage
-
 # Abstract
 What are the effect of the different airlines performance on airport gate utilization. 
 
