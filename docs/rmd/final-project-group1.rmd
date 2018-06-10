@@ -45,18 +45,19 @@ set.seed(42)
 
 # Abstract
 What are the effect of the different airlines performance on airport gate utilization. 
+The focus of the research is to determine the effects of airlines' performance on airport gate utilization on airport financials. 
 
 # Introduction
 This study will look at John F. Kennedy International Airport (JFK Airport). JFK Airport is located in the neighborhood of Jamaica in the borough of Queens, in New York, 30km (16 Miles) southeast of Midtown Manhattan.
-One of the busiest international air passenger airports in North America and the sixth busiest airpots in United States with close to 60 million passengers usint the facility a year (2016 data). 
-The airport features six passenger terminals and four runways.
+One of the busiest international air passenger airports in North America and the sixth busiest airpots in United States with close to 60 million passengers using the facility each year. 
+The airport features six passenger terminals and four runways, the over ninty airline carriers operate at airport using the more than 128 gates across the six passenger terminals.
 
 
 ![alt text](https://binged.it/2sWBsfF)
 
 
-More than ninty airlines operate at JFK Airport using the more than 128 gates across six terminals.
-The focus of the research is to determine the effects of airlines' performance on airport gate utilization on airport financials. 
+
+United State airline performance information from an eleven-year span has been retrieved from airlines transportation database. The datasets are from the year 1997 through to the year 2008.
 
 
 
