@@ -114,6 +114,38 @@ Apply financial estimates of the performance using available research/data on:
 - Estimate delay costs using European proxy studies adjusted for currency parity between Euro and USD
 - Publicly available blended load factor for airline group (i.e. United Airlines, American Airlines) as opposed to individual airline blended cost.
 
+| **Phase**|**Task Name**  |**Schedule**  | **Resources** |**Risks**|**Status**
+|--|--|--|--|--|--|
+|Business understanding  || 3 days | All analysts |	|Completed|	
+|Data understanding  |  | 2 days |	|	|In progress|
+|  | Initial data collection |  |	|	|Completed|
+|  | Data description |  |	|	|Completed|
+|  | Data quality verification |  |	|	|In progress|
+|  | Exploratory analysis|  |	|	|In progress|
+|Data preparation  |  | 2 days |	|	|In progress|
+|  | Selection |  |	|	|Completed 2 iterations|
+|  | Cleaning|  |	|	|Completed 2 iterations|
+|  | Construction |  |	|	|Completed 2 iterations|
+|  | Integration|  |	|	|Completed 2 iterations|
+|  | Formatting |  |	|	|Completed 2 iterations|
+|Modeling  |  | 5 days |	|	|Not started|
+|  | Generate test design |  |	|	||
+|  | Build model|  |	|	||
+|  | Interpreter model results|  |	|	||
+|  | Model evaluation |  |	|	||
+|  | Refine and repeat |  |	|	||
+|Evaluation  |  | 4 days |	|	|Not started|
+|  | Assessment of results |  |	|	||
+|  | Review of process|  |	|	||
+|  | Determine recs and actions |  |	|	||
+|  | Refine and repeat |  |	|	||
+|Deployment  |  | 1 day |	|	|Not started|
+|  |Create deployment plan|  |	|	||
+|  |Create monitoring and maintenance plan  |  |	|	||
+|  |Produce final report  |  |	|	||
+|  |Review project  |  |	|	||
+
+
 # Potential Risks
 
 Use of assumptions including past performance to predict future performance.  Simplifying cost estimates such as aggregate load factors and blended costs.  Reliance of public data without management inputs.  Data did not exclude normalization of data for abnormal, one-time events.
