@@ -84,7 +84,7 @@ in unadjusted Euros, unless stated otherwise.
 
 In another paper [@ding_airport_nodate] the over-constrained Airport Gate Assignment Problem was studied, where the objectives are to minimize the number of ungated ???ights and the total walking distances or connection times. They approach the problem by ???rst using a greedy algorithm to minimize ungated ???ights and by developing exchange moves which then facilitate the use of heuristics. Simulated Annealing and a hybrid of Simulated Annealing and Tabu Search are used.
 
-Airport gate assignment is of great importance in airport operations. In this paper [@li_airport_nodate], the authors study the Airport Gate Assignment Problem (AGAP), propose a new model and implement the model with Optimization Programming language (OPL). With the objective to minimize the number of conflicts of any two adjacent aircrafts assigned to the same gate, the authors build a mathematical model with logical constraints and the binary constraints, which can provide an efficient evaluation criterion for the Airlines to estimate the current gate assignment. To illustrate the feasibility of the model the authors construct experiments with the data obtained from Continental Airlines, Houston Gorge Bush Intercontinental Air-port IAH, which indicate that our model is both energetic and effective. Moreover, the authors interpret experimental results, which further demonstrate that our proposed model can provide a powerful tool for airline companies to estimate the efficiency of their current work of gate assignment.
+Airport gate assignment is of great importance in airport operations. In this paper [@li_airport_nodate], the authors studied the Airport Gate Assignment Problem (AGAP), propose a new model and implement the model with Optimization Programming language (OPL). With the objective to minimize the number of conflicts of any two adjacent aircrafts assigned to the same gate, the authors build a mathematical model with logical constraints and the binary constraints, which can provide an efficient evaluation criterion for the Airlines to estimate the current gate assignment. To illustrate the feasibility of the model the authors construct experiments with the data obtained from Continental Airlines, Houston Gorge Bush Intercontinental Air-port IAH, which indicate that our model is both energetic and effective. Moreover, the authors interpret experimental results, which further demonstrate that our proposed model can provide a powerful tool for airline companies to estimate the efficiency of their current work of gate assignment.
 
 To help researched see how your airport is performing with FlightStats monthly On-time Performance Report, this report [@noauthor_airline_nodate] compares the on-time arrival performance of major and regional airports around the world .
 
@@ -99,11 +99,9 @@ This thesis [@riedel_approach_2006] presents an approach for predicting operatio
 
 # Proposed plan
 
-Use Airline gate operations performance over a 1997 to 2008 using available data from bureau of transportation statistics- explain what performance means:
+The focus of this study will be John F. Kennedy Airport in New York.  The study will analyze airline gate operations performance measures over a 1997 to 2008 of publicly available data from bureau of transportation statistics.  These performance measures include the following:
 
-Focus status on New York John F. Kennedy Airport.
-
-Scope of performance indicators on arriving domestic flights are limited to as follows:
+Scope of performance measures will be limited on arriving domestic flights as follows:
 - Arrivals
 - Domestic flights
 - Number of flights
@@ -111,20 +109,21 @@ Scope of performance indicators on arriving domestic flights are limited to as f
 - Number of delays coming in / going out
 - Number of Cancellation
 
-Apply financial estimates of the performance using available research on:
+Apply financial estimates of the performance using available research/data on:
 - Lost revenues for cancelled flights at JFK
 - Estimate delay costs using European proxy studies adjusted for currency parity between Euro and USD
-- Publicly available blended load factor for airline group (i.e. United Airlines, American Airlines) as opposed to actual carrier
+- Publicly available blended load factor for airline group (i.e. United Airlines, American Airlines) as opposed to individual airline blended cost.
 
 # Potential Risks
 
-Use of assumptions including past performance to predict future performance.  Simplifying cost estimates such as aggregate load factors and blended costs.  Reliance of public data without management inputs.  Excludes normalization of data for abnormal, one-time events.
+Use of assumptions including past performance to predict future performance.  Simplifying cost estimates such as aggregate load factors and blended costs.  Reliance of public data without management inputs.  Data did not exclude normalization of data for abnormal, one-time events.
 
 # Cost/benefit analysis
+Understanding gate performance of airlines enable airport management to proper plan airline gate assignments optimally that reduces lost revenues, maximizes the use of gate facilities and defers/avoids expansion of capex due to inefficient use. 
 
 # Conclusion
 
-Airports perform complex operations that involve close coordination between the airlines, passengers and airport authority. Optimizing gate operations benefit all these stakeholders.  Airlines can avoid the direct cost of delays.  Passengers are able to have a better airport experience.  Airports are able to maximize the use of gate facilities and avoid unnecessary capital builds.
+Airports perform complex operations that involve close coordination between the airlines, passengers and airport authority. Optimizing gate operations benefit all these stakeholders; Airlines can avoid the direct cost of delays. Passengers are able to have a better airport experience. Airports are able to maximize the use of gate facilities and avoid unnecessary capital builds.
 
 \newpage
 
