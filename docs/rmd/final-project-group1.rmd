@@ -22,7 +22,7 @@ affiliation:
 
 bibliography      : ["r-references.bib"]
 
-figsintext        : yes
+figsintext        : no
 figurelist        : no
 tablelist         : no
 footnotelist      : no
@@ -30,7 +30,7 @@ lineno            : no
 mask              : no
 linkcolor         : "blue"
 class             : "man"
-output            : papaja::apa6_word
+output            : papaja::apa6_pdf
 ---
 
 ```{r load_packages, include = FALSE}
@@ -87,6 +87,55 @@ knitr::include_graphics("../../images/jfk-terminal-2-map.jpg")
 
 Information from 22 years has been retrieved from airlines transportation database. These datasets are from 1987 to 2008 and are relative to United State airlines performance (see Table 2).
 
+For the year 2008, JFK airport has 118.804 flights from 11 different carriers. The top 4 most important carriers are JetBlue Airways with 45% of total traffic followed by Comair Inc. (16%), Delta Air Lines (14%) and American Airlines Inc. (10%). Number of flights per carrier at New York John F. Kennedy Airport (JFK) presented here (see Table\ \@ref(tab:numf)).
+
+## Model estimation
+Scope of performance measures will be limited on arriving domestic flights as follows:
+ - Arrivals
+ - Domestic flights
+ - Number of flights
+ - Number of passengers
+ - Number of delays coming in / going out
+ - Number of Cancellation
+
+Apply financial estimates of the performance using available research/data on:
+ - Lost revenues for cancelled flights at JFK
+ - Estimate delay costs using European proxy studies adjusted for currency parity between Euro and USD
+ - Publicly available blended load factor for airline group (i.e. United Airlines, American Airlines) as opposed to individual airline blended cost.
+
+## The process
+For the development of this project we are using CRoss-Industry Standard Process for Data Mining (CRISP-DM) (see Figure\ \@ref(fig:crisp-dm)) was developed by Daimler Chrysler (then Daimler-Benz), SPSS (then ISL) and NCR in 1999. Compiling the current proposal document is a part of this process (see Table 1), in it's preparation our team has conducted 2 iteration of the CRISP-DM process.
+
+```{r crisp-dm, fig.cap = "CRISP-DM Process Diagramm.", fig.align = "center", out.width ="0.75\\textwidth"}
+knitr::include_graphics("../../images/CRISP-DM_Process_Diagram.png")
+```
+
+# Potential Risks
+Use of assumptions including past performance to predict future performance.  Simplifying cost estimates such as aggregate load factors and blended costs.  Reliance of public data without management inputs.  Data did not exclude normalization of data for abnormal, one-time events.
+
+# Cost/benefit analysis
+Understanding gate performance of airlines enable airport management to proper plan airline gate assignments optimally that reduces lost revenues, maximizes the use of gate facilities and defers/avoids expansion of capex due to inefficient use. 
+
+# Conclusion
+Airports perform complex operations that involve close coordination between the airlines, passengers and airport authority. Optimizing gate operations benefit all these stakeholders; Airlines can avoid the direct cost of delays. Passengers are able to have a better airport experience. Airports are able to maximize the use of gate facilities and avoid unnecessary capital builds.
+
+\newpage
+
+# References
+```{r create_r-references}
+r_refs(file = "r-references.bib")
+```
+\begingroup
+\setlength{\parindent}{-0.5in}
+\setlength{\leftskip}{0.5in}
+
+<div id = "refs"></div>
+\endgroup
+
+\newpage
+
+# Tables
+
 ---
 output: pdf_document
 ---
@@ -125,7 +174,7 @@ output: pdf_document
 
 Table: Variable descriptions
 
-For the year 2008, JFK airport has 118.804 flights from 11 different carriers. The top 4 most important carriers are JetBlue Airways with 45% of total traffic followed by Comair Inc. (16%), Delta Air Lines (14%) and American Airlines Inc. (10%). Number of flights per carrier at New York John F. Kennedy Airport (JFK) presented here (see Table\ \@ref(tab:numf)).
+\newpage
 
 ```{r numf, results = 'asis', echo = FALSE}
 flights <- read.csv("../../data/NumFlights .csv", row.names = NULL)
@@ -139,12 +188,11 @@ apa_table(
 )
 ```
 
-Delay trend IN/OUT in minute for top 4 carriers at JFK
+
+\newpage
 
 ---
 output: pdf_document
-fontsize: 8pt
-geometry: margin=1in
 ---
 
 | JetBlue Airways | Delay IN | Delay OUT  |
@@ -166,6 +214,7 @@ geometry: margin=1in
 
 Table: Delay trend IN/OUT in minute for the top (JetBlue Airways) carrier at JFK.
 
+\newpage
 
 ---
 output: pdf_document
@@ -190,30 +239,6 @@ output: pdf_document
 
 
 Table: Total Cancellations
-
-
-
-## Model estimation
-Scope of performance measures will be limited on arriving domestic flights as follows:
- - Arrivals
- - Domestic flights
- - Number of flights
- - Number of passengers
- - Number of delays coming in / going out
- - Number of Cancellation
-
-Apply financial estimates of the performance using available research/data on:
- - Lost revenues for cancelled flights at JFK
- - Estimate delay costs using European proxy studies adjusted for currency parity between Euro and USD
- - Publicly available blended load factor for airline group (i.e. United Airlines, American Airlines) as opposed to individual airline blended cost.
-
-## The process
-For the development of this project we are using CRoss-Industry Standard Process for Data Mining (CRISP-DM) (see Figure\ \@ref(fig:crisp-dm)) was developed by Daimler Chrysler (then Daimler-Benz), SPSS (then ISL) and NCR in 1999. Compiling the current proposal document is a part of this process (see Table 1), in it's preparation our team has conducted 2 iteration of the CRISP-DM process.
-
-```{r crisp-dm, fig.cap = "CRISP-DM Process Diagramm.", fig.align = "center", out.width ="0.75\\textwidth"}
-knitr::include_graphics("../../images/CRISP-DM_Process_Diagram.png")
-```
-
 
 \newpage
 
@@ -253,26 +278,3 @@ output: pdf_document
 |  |Review project|	|	||
 
 Table: Proposed Plan Phases
-
-# Potential Risks
-Use of assumptions including past performance to predict future performance.  Simplifying cost estimates such as aggregate load factors and blended costs.  Reliance of public data without management inputs.  Data did not exclude normalization of data for abnormal, one-time events.
-
-# Cost/benefit analysis
-Understanding gate performance of airlines enable airport management to proper plan airline gate assignments optimally that reduces lost revenues, maximizes the use of gate facilities and defers/avoids expansion of capex due to inefficient use. 
-
-# Conclusion
-Airports perform complex operations that involve close coordination between the airlines, passengers and airport authority. Optimizing gate operations benefit all these stakeholders; Airlines can avoid the direct cost of delays. Passengers are able to have a better airport experience. Airports are able to maximize the use of gate facilities and avoid unnecessary capital builds.
-
-\newpage
-
-# References
-```{r create_r-references}
-r_refs(file = "r-references.bib")
-```
-
-\begingroup
-\setlength{\parindent}{-0.5in}
-\setlength{\leftskip}{0.5in}
-
-<div id = "refs"></div>
-\endgroup
