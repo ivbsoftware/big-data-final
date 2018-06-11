@@ -255,32 +255,32 @@ output: pdf_document
 | Phase| Task Name  | Schedule  | Resources | Status |
 |--|--|--|--|--|
 |Business understanding  || 3 days | All analysts |Completed|	
-|Data understanding  |  | 2 days ||In progress|
+|Data understanding  |  | 2 days |Business analysts|In progress|
 |  | Data collection |  |	|Completed|
 |  | Data description |  | |Completed|
 |  | Data quality check |  |	|In progress|
 |  | Exploratory analysis|  |	|In progress|
-|Data preparation  |  | 2 days |	|In progress|
+|Data preparation  |  | 2 days |Business analysts\Modelers	|In progress|
 |  | Selection |  |	|2 iterations|
 |  | Cleaning|  |	|2 iterations|
 |  | Construction|	|	|2 iterations|
 |  | Integration|	|	|2 iterations|
 |  | Formatting |	|	|2 iterations|
-|Modeling  |  | 5 days|	|Not started|
+|Modeling  |  | 5 days|Modelers|Not started|
 |  | Generate test design|	|	||
 |  | Build model||||
 |  | Interpreter model results|  |	||
 |  | Model evaluation |  |	|	|
-|  | Refine and repeat |  |	|	|
-|Evaluation  |  | 4 days |	|Not started|
+|  | Refine and repeat |  |All analysts	|	|
+|Evaluation  |  | 4 days |Modelers|Not started|
 |  | Assessment of results  |	|	||
 |  | Review of process| |	||
 |  | Determine actions|	|	||
-|  | Refine and repeat  |	|	||
-|Deployment  |  | 1 day	|	|Not started|
-|  |Deployment plan|	|	||
-|  |Maintenance plan  |	|	||
-|  |Final report  | |	||
-|  |Review project|	|	||
+|  | Refine and repeat  |	|All analysts	||
+|Deployment  |  | 1 day	|Modelers\Project Mng	|Not started|
+|  |Deployment plan|	|	Modelers||
+|  |Maintenance plan  |	|Project Mng	||
+|  |Final report  | |Modelers\Project Mng	||
+|  |Review project|	|	Project Mng||
 
 Table: Proposed Plan Phases
