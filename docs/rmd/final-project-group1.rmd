@@ -43,16 +43,16 @@ set.seed(42)
 ```
 
 # Abstract
-The search for optimal assignment of flights to gates is of great importance to airport to elimate delays, maintain operations and maximize profits. In this paper the focus on the research is to determin the effects of airlines' performance on airport gate utilization on airport financials. An international airport is the most populated and busiest travel area where many people used to move around the world. Gate assignment is one of the most important tasks for airport ground operations, which assigns appropriate airport gates with high efficiency reasonable arrangement. It is important to notice that flights delays and cancellation have a negative impact on airport performance and do not provide an excellent experience to travelers. This study aims to propose a new airport gate assignment method to effectively improve the comprehensive operation capacity and efficiency. It will also help to optimize the number of gate allocated to each airline and improve travelers experience.
+Airport management comprises of a number of complex operations such as security, passenger check-ins, baggage management, taxiing, gate operations, retail, etc.  These operations have many stakeholder touchpoints but we can categorize them to three distinct but related stakeholders namely  the airport operator, the airlines and passengers.  Those multiple operations affect the both experience and financials of these stakeholders. Our research will focus on one specific operation, which is gate management. The primary focus of the project is to determine the how the customers  are affected by delays and cancellations and develop mathematical model based on the data analysys to maximize that number of passengers served through the gates.
 
 # Introduction
-Airport management comprises of a number of complex operations such as security, passenger check-ins, baggage management, taxiing, gate operations, retail, etc.  These operations have many stakeholder touchpoints but we can categorize them to three distinct but related stakeholders namely  the airport operator, the airlines and passengers.  Those multiple operations affect the both experience and financials of these stakeholders.
+The search for optimal assignment of flights to gates is of great importance to airport to elimate delays, maintain operations and maximize profits. In this project the focus on the research is to determin the effects of airlines' performance on airport gate utilization on airport financials. An international airport is the most populated and busiest travel area where many people used to move around the world. Gate assignment is one of the most important tasks for airport ground operations, which assigns appropriate airport gates with high efficiency reasonable arrangement. It is important to notice that flights delays and cancellation have a negative impact on airport performance and do not provide an excellent experience to travelers. This study aims to propose a new airport gate assignment method to effectively improve the comprehensive operation capacity and efficiency. It will also help to optimize the number of gate allocated to each airline and improve travelers experience. 
 
-Our research will focus on one specific operation, which is gate management. Gates are where planes park (in the apron), and where passengers disembark and get into the planes.  These are also the locations where passengers wait before getting into their flights.
-
-Airports managed gates though a negotiation with the airlines who advise or requests airports to set aside a certain number of gates (called gate allocations) for certain dates in the upcoming season.  In North America it is divided between the summer (May to Oct) and winter (Nov to April) seasons.  These negotiations are based on these two seasons.  The airports then do the gate allocation based on relationship with airlines, their flight history, their delay or cancellation profiles, etc. Airports analyze who to provide the gates then advise the airlines on what is the allocation to them.  Airlines develop their route schedules which you will eventually see in their websites and travel sites, etc..  Airports on the other hand, then do their resource planning according to this schedule.  Airports budget for personnel, get the necessary systems or services for systems, even spend for new facilities that need to be build around this schedule if needed – Capex program.  Sometimes, airport shuffling airlines around the gates and when other airlines affected, airports work with these airlines.
+Gates are where planes park (in the apron), and where passengers disembark and get into the planes.  These are also the locations where passengers wait before getting into their flights. Airports managed gates though a negotiation with the airlines who advise or requests airports to set aside a certain number of gates (called gate allocations) for certain dates in the upcoming season.  In North America it is divided between the summer (May to Oct) and winter (Nov to April) seasons.  These negotiations are based on these two seasons.  The airports then do the gate allocation based on relationship with airlines, their flight history, their delay or cancellation profiles, etc. Airports analyze who to provide the gates then advise the airlines on what is the allocation to them.  Airlines develop their route schedules which you will eventually see in their websites and travel sites, etc..  Airports on the other hand, then do their resource planning according to this schedule.  Airports budget for personnel, get the necessary systems or services for systems, even spend for new facilities that need to be build around this schedule if needed – Capex program.  Sometimes, airport shuffling airlines around the gates and when other airlines affected, airports work with these airlines.
 
 # Competitive Analysis
+The area of airport gates assignment is well researched. Several researches were trying to solve the problem taking into account multiple factors, like cost, passenger walking distances, networking of connected flights etc.
+
 In one research [@azmi_solving_2016], in order to solve discrete optimization problem, the SKF algorithm is combined with angle modulated approach. Airport gate allocation problem refers to the search for optimal assignment of flights to gates at an airport. Assignment of flight to gates has become very complex nowadays, especially for a big size airport. In this study, the airport gate allocation problem is solved using a recently introduced angle modulated simulated Kalman filter (AMSKF). The objective of this study is to minimize the total walking distance. A small case study with 14 flights and 16 gates has been chosen. Preliminary results show that SKF is a promising algorithm for solving the airport gate allocation problem.
 
 Another paper [@barnhart_demand_2012] summarizes research trends and opportunities in the area of managing air transportation demand and capacity. Capacity constraints and resulting congestion and low schedule reliability currently impose large costs on airlines and their passengers. Significant capacity increases that would solve these problems are not expected in the near- or medium-term. This paper outlines first a number of directions for effecting improvement through marginal capacity increases and better management of demand and available capacity. It then describes strategic initiatives that airlines and civil aviation authorities might undertake over time horizons of months to years as well as tactical measures that may be adopted on a daily basis in response to dynamic, real-time developments like poor weather or schedule disruptions. Research challenges in these areas are identified and classified in terms of specifying, allocating, and utilizing capacity. The first two categories reject challenges faced by infrastructure providers, the last category challenges faced by airlines.
@@ -86,40 +86,26 @@ knitr::include_graphics("../../images/jfk-terminal-2-map.jpg")
 ```
 
 ## Data Insights
-Information from 22 years has been retrieved from airlines transportation database. These datasets are from 1987 to 2008 and are relative to United State airlines performance (see Table 2). 
-
-For the year 2008, JFK airport has 118.804 flights from 11 different carriers. The top 4 most important carriers are JetBlue Airways with 45% of total traffic followed by Comair Inc. (16%), Delta Air Lines (14%) and American Airlines Inc. (10%). Number of flights per carrier at New York John F. Kennedy Airport (JFK) presented here (see Table\ \@ref(tab:numf)).
+Information from 22 years has been retrieved from airlines transportation database. These datasets are from 1987 to 2008 and are relative to United State airlines performance (see Table 2). For the year 2008, JFK airport has 118.804 flights from 11 different carriers. The top 4 most important carriers are JetBlue Airways with 45% of total traffic followed by Comair Inc. (16%), Delta Air Lines (14%) and American Airlines Inc. (10%). Number of flights per carrier at New York John F. Kennedy Airport (JFK) presented here (see Table\ \@ref(tab:numf)).
 
 ## Model estimation
 Our research will focus on the impact of this delays and cancellations to the airport.  What our research goal is to answer the following questions:
 
-a.	 What are the impacts of airline delays on gate management  specifically on the following:
-a.	What is the current baseline of delay and cancelled events in terms of number of instances, flights and instances (Quantify and create a baseline)
-b.	Which airlines cause these delays?
-c.	What are the causes of these delays?
-d.	What is the impact of these delays into gate utilization
-e.	What is the estimated number of passengers affected by delays and cancellations
-f.	In the ballpark, what are the the financial costs, of delays and cancellation
-b.	What is the future forecasted airline delays  
-a.	Using historical data and linear progressing, what will be the estimated future delays and cancellations in the next 5, 10, 20 years?
-b.	Combining historical data and using scenario analysis of varying growths for each airlines, what is the estimated future delays and cancellations in the next 5, 10, 20 years  using Monte Carlo Analysis
-c.	What is the estimated the potential impact of number of customers affected and financial costs of these future delay s and cancellations
-c.	What should the airport consider as options to address potential future scenarios?
+ - What are the impacts of airline delays on gate management  specifically on the following:
+    - What is the current baseline of delay and cancelled events in terms of number of instances, flights and instances (Quantify and create a baseline)
+    -	Which airlines cause these delays?
+    -	What are the causes of these delays?
+    - What is the impact of these delays into gate utilization
+    - What is the estimated number of passengers affected by delays and cancellations
+    - In the ballpark, what are the the financial costs, of delays and cancellation
 
+ - What is the future forecasted airline delays  
+    - Using historical data and linear progressing, what will be the estimated future delays and cancellations in the next 5, 10, 20 years?
+    - Combining historical data and using scenario analysis of varying growths for each airlines, what is the estimated future delays and cancellations in the next 5, 10, 20 years  using Monte Carlo Analysis
+    - What is the estimated the potential impact of number of customers affected and financial costs of these future delay s and cancellations
+ - What should the airport consider as options to address potential future scenarios?
 
-
-Scope of performance measures will be limited on arriving domestic flights as follows:
- - Arrivals
- - Domestic flights
- - Number of flights
- - Number of passengers
- - Number of delays coming in / going out
- - Number of Cancellation
-
-Apply financial estimates of the performance using available research/data on:
- - Lost revenues for cancelled flights at JFK
- - Estimate delay costs using European proxy studies adjusted for currency parity between Euro and USD
- - Publicly available blended load factor for airline group (i.e. United Airlines, American Airlines) as opposed to individual airline blended cost.
+As the result of this analysis we are planning to build a model based on one of the variations of Linear Programming to optimize the gate allocation. The required for that methodology cost function will be developed after thorough data analysis where we are planning to use Linear Regression to extract behaioral parameters of airlines from the historical data.
 
 ## The process
 For the development of this project we are using CRoss-Industry Standard Process for Data Mining (CRISP-DM) (see Figure\ \@ref(fig:crisp-dm)) was developed by Daimler Chrysler (then Daimler-Benz), SPSS (then ISL) and NCR in 1999. Compiling the current proposal document is a part of this process (see Table 1), in it's preparation our team has conducted 2 iteration of the CRISP-DM process.
@@ -133,6 +119,12 @@ Use of assumptions including past performance to predict future performance.  Si
 
 # Cost/benefit analysis
 Understanding gate performance of airlines enable airport management to proper plan airline gate assignments optimally that reduces lost revenues, maximizes the use of gate facilities and defers/avoids expansion of capex due to inefficient use. 
+
+If airlines perform as what was agreed with the airport, then the gates are managed optimally. However, there are instances when a number of flights, get delayed or even cancelled.  There are various reasons for these delays.  It could be the weather-related, security reason, or natural calamity or sometimes it is the airline (i.e. bad plan, route did not have enough passenger, labour strike, non-payment of leases (these planes are mostly leased financed). 
+
+When there is a delay or cancellation, the impact is two-fold from the point of view of the airport.  First, customer (passenger) experience suffers.  The second is that the airport would incur both actual cost (the personnel it hired, capex spent if applicable, deicing, electricity, use of systems, etc.), revenue lost (landing fees, terminal fees), and opportunity cost (airport could have given that particular gate to another airline).
+
+From the point of the airlines, it is similar but the customer experience is more palpable than the airports.  Typically, passengers view delays as the fault of airlines not airports (unlike delays in baggage retrieval is faulted to the airport when it is actually more of the airline).  The airline also suffers financially such as cost of transporting the baggage and hotel accommodation, salaries for pilot and crew members, jet fuel costs, etc.
 
 # Conclusion
 Airports perform complex operations that involve close coordination between the airlines, passengers and airport authority. Optimizing gate operations benefit all these stakeholders; Airlines can avoid the direct cost of delays. Passengers are able to have a better airport experience. Airports are able to maximize the use of gate facilities and avoid unnecessary capital builds.
