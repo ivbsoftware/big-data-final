@@ -1,6 +1,6 @@
 ---
-title             : "Final Project Proposal - Group 1, course CSDA1000SUMA18"
-shorttitle        : "Final Project Proposal"
+title             : "Airport Gate Assignment Optimization. Final Project Proposal - Group 1, course CSDA1000SUMA18"
+shorttitle        : "Airport Gate Assignment Optimization"
 
 author: 
   - name          : "Viviane Adohouannon"
@@ -43,12 +43,14 @@ set.seed(42)
 ```
 
 # Abstract
-The search for optimal assignment of flights to gates is of great importance to airport to elimate delays, maintain operations and maximize profits. In this paper the focus on the research is to determin the effects of airlines' performance on airport gate utilization on airport financials.
-An international airport is the most populated and busiest travel area where many people used to move around the world. Gate assignment is one of the most important tasks for airport ground operations, which assigns appropriate airport gates with high efficiency reasonable arrangement. 
-It is important to notice that flights delays and cancellation have a negative impact on airport performance and do not provide an excellent experience to travelers. This study aims to propose a new airport gate assignment method to effectively improve the comprehensive operation capacity and efficiency of John F. Kennedy International airport (JFK airport). 
-It will also help to optimize the number of gate allocated to each airline and improve travelers experience.
+The search for optimal assignment of flights to gates is of great importance to airport to elimate delays, maintain operations and maximize profits. In this paper the focus on the research is to determin the effects of airlines' performance on airport gate utilization on airport financials. An international airport is the most populated and busiest travel area where many people used to move around the world. Gate assignment is one of the most important tasks for airport ground operations, which assigns appropriate airport gates with high efficiency reasonable arrangement. It is important to notice that flights delays and cancellation have a negative impact on airport performance and do not provide an excellent experience to travelers. This study aims to propose a new airport gate assignment method to effectively improve the comprehensive operation capacity and efficiency. It will also help to optimize the number of gate allocated to each airline and improve travelers experience.
 
 # Introduction
+Airport management comprises of a number of complex operations such as security, passenger check-ins, baggage management, taxiing, gate operations, retail, etc.  These operations have many stakeholder touchpoints but we can categorize them to three distinct but related stakeholders namely  the airport operator, the airlines and passengers.  Those multiple operations affect the both experience and financials of these stakeholders.
+
+Our research will focus on one specific operation, which is gate management. Gates are where planes park (in the apron), and where passengers disembark and get into the planes.  These are also the locations where passengers wait before getting into their flights.
+
+Airports managed gates though a negotiation with the airlines who advise or requests airports to set aside a certain number of gates (called gate allocations) for certain dates in the upcoming season.  In North America it is divided between the summer (May to Oct) and winter (Nov to April) seasons.  These negotiations are based on these two seasons.  The airports then do the gate allocation based on relationship with airlines, their flight history, their delay or cancellation profiles, etc. Airports analyze who to provide the gates then advise the airlines on what is the allocation to them.  Airlines develop their route schedules which you will eventually see in their websites and travel sites, etc..  Airports on the other hand, then do their resource planning according to this schedule.  Airports budget for personnel, get the necessary systems or services for systems, even spend for new facilities that need to be build around this schedule if needed – Capex program.  Sometimes, airport shuffling airlines around the gates and when other airlines affected, airports work with these airlines.
 
 # Competitive Analysis
 In one research [@azmi_solving_2016], in order to solve discrete optimization problem, the SKF algorithm is combined with angle modulated approach. Airport gate allocation problem refers to the search for optimal assignment of flights to gates at an airport. Assignment of flight to gates has become very complex nowadays, especially for a big size airport. In this study, the airport gate allocation problem is solved using a recently introduced angle modulated simulated Kalman filter (AMSKF). The objective of this study is to minimize the total walking distance. A small case study with 14 flights and 16 gates has been chosen. Preliminary results show that SKF is a promising algorithm for solving the airport gate allocation problem.
@@ -77,19 +79,35 @@ Optimizing gate assignments at airport terminals is analysed in this article [@n
 This thesis [@riedel_approach_2006] presents an approach for predicting operational performance of airlines on the basis of flight schedules and aircraft assignments. The methodology uses aggregate measures of properties of aircraft assignments, called Aircraft Assignment Key Performance Indicators (KPIs), and aims to find correlations between them and the operational performance of the airline. A simulation experiment is prepared to gather a large set of data points for analysis. A motivation is given for the use of control theoretic approaches in airline operations to utilize the KPIs as a basis for initial planning and corrective actions.
 
 # Proposed Plan
-The focus of this study will be John F. Kennedy Airport in New York. The study will analyze airline gate operations performance measures over a 1997 to 2008 of publicly available data from bureau of transportation statistics. JFK Airport is located in the neighborhood of Jamaica in the borough of Queens, in New York, 30km (16 Miles) southeast of Midtown Manhattan. One of the busiest international air passenger airports in North America and the sixth busiest airpots in United States with close to 60 million passengers usint the facility a year (2016 data). The airport features six passenger terminals and four runways (see Figure\ \@ref(fig:jfk)). More than ninty airlines operate at JFK Airport using the more than 128 gates across six terminals. The focus of the research is to determine the effects of airlines' performance on airport gate utilization. 
+The focus of this study will be one of the major US airports - either John F. Kennedy Airport in New York or San Francisco Airport (SFO) depending on the data availability. The study will analyze airline gate operations performance measures over a 1997 to 2008 of publicly available data from bureau of transportation statistics. As an example - JFK Airport is located in the neighborhood of Jamaica in the borough of Queens, in New York, 30km (16 Miles) southeast of Midtown Manhattan. One of the busiest international air passenger airports in North America and the sixth busiest airpots in United States with close to 60 million passengers usint the facility a year (2016 data). The airport features six passenger terminals and four runways (see Figure\ \@ref(fig:jfk)). More than ninty airlines operate at JFK Airport using the more than 128 gates across six terminals. The focus of the research is to determine the effects of airlines' performance on airport gate utilization. 
 
 ```{r jfk, fig.cap = "CRISP-DM Process Diagramm.", fig.align = "center", out.width = "0.75\\textwidth", fig.pos = "!h"}
 knitr::include_graphics("../../images/jfk-terminal-2-map.jpg")
 ```
 
 ## Data Insights
-
-Information from 22 years has been retrieved from airlines transportation database. These datasets are from 1987 to 2008 and are relative to United State airlines performance (see Table 2).
+Information from 22 years has been retrieved from airlines transportation database. These datasets are from 1987 to 2008 and are relative to United State airlines performance (see Table 2). 
 
 For the year 2008, JFK airport has 118.804 flights from 11 different carriers. The top 4 most important carriers are JetBlue Airways with 45% of total traffic followed by Comair Inc. (16%), Delta Air Lines (14%) and American Airlines Inc. (10%). Number of flights per carrier at New York John F. Kennedy Airport (JFK) presented here (see Table\ \@ref(tab:numf)).
 
 ## Model estimation
+Our research will focus on the impact of this delays and cancellations to the airport.  What our research goal is to answer the following questions:
+
+a.	 What are the impacts of airline delays on gate management  specifically on the following:
+a.	What is the current baseline of delay and cancelled events in terms of number of instances, flights and instances (Quantify and create a baseline)
+b.	Which airlines cause these delays?
+c.	What are the causes of these delays?
+d.	What is the impact of these delays into gate utilization
+e.	What is the estimated number of passengers affected by delays and cancellations
+f.	In the ballpark, what are the the financial costs, of delays and cancellation
+b.	What is the future forecasted airline delays  
+a.	Using historical data and linear progressing, what will be the estimated future delays and cancellations in the next 5, 10, 20 years?
+b.	Combining historical data and using scenario analysis of varying growths for each airlines, what is the estimated future delays and cancellations in the next 5, 10, 20 years  using Monte Carlo Analysis
+c.	What is the estimated the potential impact of number of customers affected and financial costs of these future delay s and cancellations
+c.	What should the airport consider as options to address potential future scenarios?
+
+
+
 Scope of performance measures will be limited on arriving domestic flights as follows:
  - Arrivals
  - Domestic flights
@@ -140,37 +158,37 @@ r_refs(file = "r-references.bib")
 output: pdf_document
 ---
 
-| **Name**          | **Description**                                                           |
-|-------------------|---------------------------------------------------------------------------|
-| Year              | 1987-2008                                                                 |
-| Month             | 1 - 12                                                                    |
-| DayofMonth        | 1 - 31                                                                    |
-| DayOfWeek         | 1 (Monday) - 7 (Sunday)                                                   |
-| DepTime           | actual departure time (local, hhmm)                                       |
-| CRSDepTime        | scheduled departure time (local, hhmm)                                    |
-| ArrTime           | actual arrival time (local, hhmm)                                         |
-| CRSArrTime        | scheduled arrival time (local, hhmm)                                      |
-| UniqueCarrier     | unique carrier code                                                       |
-| FlightNum         | flight number                                                             |
-| TailNum           | plane tail number                                                         |
-| ActualElapsedTime | in minutes                                                                |
-| CRSElapsedTime    | in minutes                                                                |
-| AirTime           | in minutes                                                                |
-| ArrDelay          | arrival delay, in minutes                                                 |
-| DepDelay          | departure delay, in minutes                                               |
-| Origin            | origin IATA airport code                                                  |
-| Dest              | destination IATA airport code                                             |
-| Distance          | in miles                                                                  |
-| TaxiIn            | taxi in time, in minutes                                                  |
-| TaxiOut           | taxi out time in minutes                                                  |
-| Cancelled         | was the flight cancelled?                                                 |
-| CancellationCode  | A = carrier, B = weather, C = NAS, D = security) |
-| Diverted          | 1 = yes, 0 = no                                                           |
-| CarrierDelay      | in minutes                                                                |
-| WeatherDelay      | in minutes                                                                |
-| NASDelay          | in minutes                                                                |
-| SecurityDelay     | in minutes                                                                |
-| LateAircraftDelay | in minutes                                                                |
+| Name              | Description                                     |
+|-------------------|-------------------------------------------------|
+| Year              | 1987-2008                                       |
+| Month             | 1 - 12                                          |
+| DayofMonth        | 1 - 31                                          |
+| DayOfWeek         | 1 (Monday) - 7 (Sunday)                         |
+| DepTime           | actual departure time (local, hhmm)             |
+| CRSDepTime        | scheduled departure time (local, hhmm)          |
+| ArrTime           | actual arrival time (local, hhmm)               |
+| CRSArrTime        | scheduled arrival time (local, hhmm)            |
+| UniqueCarrier     | unique carrier code                             |
+| FlightNum         | flight number                                   |
+| TailNum           | plane tail number                               |
+| ActualElapsedTime | in minutes                                      |
+| CRSElapsedTime    | in minutes                                      |
+| AirTime           | in minutes                                      |
+| ArrDelay          | arrival delay, in minutes                       |
+| DepDelay          | departure delay, in minutes                     |
+| Origin            | origin IATA airport code                        |
+| Dest              | destination IATA airport code                   |
+| Distance          | in miles                                        |
+| TaxiIn            | taxi in time, in minutes                        |
+| TaxiOut           | taxi out time in minutes                        |
+| Cancelled         | was the flight cancelled?                       |
+| CancellationCode  | A = carrier, B = weather, C = NAS, D = security)|
+| Diverted          | 1 = yes, 0 = no                                 |
+| CarrierDelay      | in minutes                                      |
+| WeatherDelay      | in minutes                                      |
+| NASDelay          | in minutes                                      |
+| SecurityDelay     | in minutes                                      |
+| LateAircraftDelay | in minutes                                      |
 
 Table: Variable descriptions
 
@@ -187,7 +205,6 @@ apa_table(
   , note = "Month,JetBlue Airways (B6), Delta Air Lines Inc. (DL), Comair Inc. (OH), American Airlines Inc. (AA), Continental Air Lines Inc. (CO), American Eagle Airlines Inc. (MQ), United Air Lines Inc. (UA), Northwest Airlines Inc. (NW), US Airways Inc. (US), Mesa Airlines Inc. (YV), Atlantic Southeast Airlines (EV)"
 )
 ```
-
 
 \newpage
 
@@ -221,22 +238,21 @@ output: pdf_document
 ---
 
 | Month  | American Airlines| JetBlue Airways | Delta Airlines  | Comair | Total|
-|--------|-----------------------------|----------------------|---------------------------|------------------|--------------------|
-| Jan-08 | 30                          | 55                   | 16                        | 63               | 164                |
-| Feb-08 | 42                          | 113                  | 27                        | 130              | 312                |
-| Mar-08 | 24                          | 72                   | 22                        | 83               | 201                |
-| Apr-08 | 36                          | 42                   | 6                         | 36               | 120                |
-| May-08 | 19                          | 10                   | 7                         | 22               | 58                 |
-| Jun-08 | 21                          | 141                  | 14                        | 84               | 260                |
-| Jul-08 | 41                          | 188                  | 29                        | 193              | 451                |
-| Aug-08 | 20                          | 197                  | 25                        | 203              | 445                |
-| Sep-08 | 15                          | 63                   | 19                        | 49               | 146                |
-| Oct-08 | 7                           | 18                   | 8                         | 15               | 48                 |
-| Nov-08 | 2                           | 37                   | 6                         | 33               | 78                 |
-| Dec-08 | 18                          | 127                  | 30                        | 121              | 296                |
-|--------|-----------------------------|----------------------|---------------------------|------------------|--------------------|
-| Total  | 275                         | 1,063                | 209                       | 1,032            | 2,579              |
-
+|--------|-----|--------|-----|--------|-------|
+| Jan-08 | 30  | 55     | 16  | 63     | 164   |
+| Feb-08 | 42  | 113    | 27  | 130    | 312   |
+| Mar-08 | 24  | 72     | 22  | 83     | 201   |
+| Apr-08 | 36  | 42     | 6   | 36     | 120   |
+| May-08 | 19  | 10     | 7   | 22     | 58    |
+| Jun-08 | 21  | 141    | 14  | 84     | 260   |
+| Jul-08 | 41  | 188    | 29  | 193    | 451   |
+| Aug-08 | 20  | 197    | 25  | 203    | 445   |
+| Sep-08 | 15  | 63     | 19  | 49     | 146   |
+| Oct-08 | 7   | 18     | 8   | 15     | 48    |
+| Nov-08 | 2   | 37     | 6   | 33     | 78    |
+| Dec-08 | 18  | 127    | 30  | 121    | 296   |
+|--------|-----|--------|-----|--------|-------|
+| Total  | 275 | 1,063  | 209 | 1,032  | 2,579 |
 
 Table: Total Cancellations
 
@@ -246,7 +262,7 @@ Table: Total Cancellations
 output: pdf_document
 ---
 
-| **Phase**|**Task Name**  |**Schedule**  | **Resources** |**Status**
+| Phase| Task Name  | Schedule  | Resources | Status |
 |--|--|--|--|--|
 |Business understanding  || 3 days | All analysts |Completed|	
 |Data understanding  |  | 2 days ||In progress|
