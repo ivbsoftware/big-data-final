@@ -76,7 +76,7 @@ To help researched see how your airport is performing with FlightStats monthly O
 The [@noauthor_data_nodate] report presents Load Factor (passenger-miles as a proportion of available seat-miles in percent ) for All Carriers and All Airports.
 Optimizing gate assignments at airport terminals is analysed in this article [@noauthor_optimizing_1998]. Airline On-Time Statistics and Delay Causes is presented here [@noauthor_ost_r_nodate].
 
-This thesis [@riedel_approach_2006] presents an approach for predicting operational performance of airlines on the basis of flight schedules and aircraft assignments. The methodology uses aggregate measures of properties of aircraft assignments, called Aircraft Assignment Key Performance Indicators (KPIs), and aims to find correlations between them and the operational performance of the airline. A simulation experiment is prepared to gather a large set of data points for analysis. A motivation is given for the use of control theoretic approaches in airline operations to utilize the KPIs as a basis for initial planning and corrective actions.
+The thesis [@riedel_approach_2006] presents an approach for predicting operational performance of airlines on the basis of flight schedules and aircraft assignments. The methodology uses aggregate measures of properties of aircraft assignments, called Aircraft Assignment Key Performance Indicators (KPIs), and aims to find correlations between them and the operational performance of the airline. A simulation experiment is prepared to gather a large set of data points for analysis. A motivation is given for the use of control theoretic approaches in airline operations to utilize the KPIs as a basis for initial planning and corrective actions.
 
 # Proposed Plan
 The focus of this study will be one of the major US airports - either John F. Kennedy Airport in New York or San Francisco Airport (SFO) depending on the data availability. The study will analyze airline gate operations performance measures over a 1997 to 2008 of publicly available data from bureau of transportation statistics. As an example - JFK Airport is located in the neighborhood of Jamaica in the borough of Queens, in New York, 30km (16 Miles) southeast of Midtown Manhattan. One of the busiest international air passenger airports in North America and the sixth busiest airpots in United States with close to 60 million passengers usint the facility a year (2016 data). The airport features six passenger terminals and four runways (see Figure\ \@ref(fig:jfk)). More than ninty airlines operate at JFK Airport using the more than 128 gates across six terminals. The focus of the research is to determine the effects of airlines' performance on airport gate utilization. 
@@ -86,7 +86,16 @@ knitr::include_graphics("../../images/jfk-terminal-2-map.jpg")
 ```
 
 ## Data Insights
-Information from 22 years has been retrieved from airlines transportation database. These datasets are from 1987 to 2008 and are relative to United State airlines performance (see Table 2). For the year 2008, JFK airport has 118.804 flights from 11 different carriers. The top 4 most important carriers are JetBlue Airways with 45% of total traffic followed by Comair Inc. (16%), Delta Air Lines (14%) and American Airlines Inc. (10%). Number of flights per carrier at New York John F. Kennedy Airport (JFK) presented here (see Table\ \@ref(tab:numf)).
+Information from 22 years has been retrieved from airlines transportation database. These datasets are from 1987 to 2008 and are relative to United State airlines performance (see Table 2). As an example, for the year 2008, JFK airport has 118.804 flights from 11 different carriers. The top 4 most important carriers are JetBlue Airways with 45% of total traffic followed by Comair Inc. (16%), Delta Air Lines (14%) and American Airlines Inc. (10%). Number of flights per carrier at New York John F. Kennedy Airport (JFK) presented here (see Table\ \@ref(tab:numf)). The following datasets were analyzed:
+
+ - 1987-2008 US Flights statistics: 
+http://stat-computing.org/dataexpo/2009/the-data.html
+ - 2015 US Flights statistics: 
+https://www.kaggle.com/usdot/flight-delays/data
+ - 2008-2017 Aircraft registration databases: 
+https://www.faa.gov/licenses_certificates/aircraft_certification/aircraft_registry/releasable_aircraft_download/
+ - SFO Gate and Stand Assignment Information: 
+https://catalog.data.gov/dataset/sfo-gate-and-stand-assignment-information
 
 ## Model estimation
 Our research will focus on the impact of this delays and cancellations to the airport.  What our research goal is to answer the following questions:
