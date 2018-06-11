@@ -30,7 +30,7 @@ lineno            : no
 mask              : no
 linkcolor         : "blue"
 class             : "man"
-output            : papaja::apa6_pdf
+output            : papaja::apa6_word
 ---
 
 ```{r load_packages, include = FALSE}
@@ -84,7 +84,48 @@ knitr::include_graphics("../../images/jfk-terminal-2-map.jpg")
 ```
 
 ## Data Insights
-Number of flights per carrier at New York John F. Kennedy Airport (JFK) (see Table\ \@ref(tab:numf)).
+
+Information from 22 years has been retrieved from airlines transportation database. These datasets are from 1987 to 2008 and are relative to United State airlines performance (see Table 2).
+
+---
+output: pdf_document
+---
+
+| **Name**          | **Description**                                                           |
+|-------------------|---------------------------------------------------------------------------|
+| Year              | 1987-2008                                                                 |
+| Month             | 1 - 12                                                                    |
+| DayofMonth        | 1 - 31                                                                    |
+| DayOfWeek         | 1 (Monday) - 7 (Sunday)                                                   |
+| DepTime           | actual departure time (local, hhmm)                                       |
+| CRSDepTime        | scheduled departure time (local, hhmm)                                    |
+| ArrTime           | actual arrival time (local, hhmm)                                         |
+| CRSArrTime        | scheduled arrival time (local, hhmm)                                      |
+| UniqueCarrier     | unique carrier code                                                       |
+| FlightNum         | flight number                                                             |
+| TailNum           | plane tail number                                                         |
+| ActualElapsedTime | in minutes                                                                |
+| CRSElapsedTime    | in minutes                                                                |
+| AirTime           | in minutes                                                                |
+| ArrDelay          | arrival delay, in minutes                                                 |
+| DepDelay          | departure delay, in minutes                                               |
+| Origin            | origin IATA airport code                                                  |
+| Dest              | destination IATA airport code                                             |
+| Distance          | in miles                                                                  |
+| TaxiIn            | taxi in time, in minutes                                                  |
+| TaxiOut           | taxi out time in minutes                                                  |
+| Cancelled         | was the flight cancelled?                                                 |
+| CancellationCode  | A = carrier, B = weather, C = NAS, D = security) |
+| Diverted          | 1 = yes, 0 = no                                                           |
+| CarrierDelay      | in minutes                                                                |
+| WeatherDelay      | in minutes                                                                |
+| NASDelay          | in minutes                                                                |
+| SecurityDelay     | in minutes                                                                |
+| LateAircraftDelay | in minutes                                                                |
+
+Table: Variable descriptions
+
+For the year 2008, JFK airport has 118.804 flights from 11 different carriers. The top 4 most important carriers are JetBlue Airways with 45% of total traffic followed by Comair Inc. (16%), Delta Air Lines (14%) and American Airlines Inc. (10%). Number of flights per carrier at New York John F. Kennedy Airport (JFK) presented here (see Table\ \@ref(tab:numf)).
 
 ```{r numf, results = 'asis', echo = FALSE}
 flights <- read.csv("../../data/NumFlights .csv", row.names = NULL)
@@ -97,6 +138,58 @@ apa_table(
   , note = "Month,JetBlue Airways (B6), Delta Air Lines Inc. (DL), Comair Inc. (OH), American Airlines Inc. (AA), Continental Air Lines Inc. (CO), American Eagle Airlines Inc. (MQ), United Air Lines Inc. (UA), Northwest Airlines Inc. (NW), US Airways Inc. (US), Mesa Airlines Inc. (YV), Atlantic Southeast Airlines (EV)"
 )
 ```
+
+Delay trend IN/OUT in minute for top 4 carriers at JFK
+
+---
+output: pdf_document
+fontsize: 8pt
+geometry: margin=1in
+---
+
+| JetBlue Airways | Delay IN | Delay OUT  |
+|----------------------|----------|-----------|
+| Jan-08               | 12,802   | 35,088    |
+| Feb-08               | 59,040   | 58,630    |
+| Mar-08               | 55,435   | 62,378    |
+| Apr-08               | 25,965   | 46,178    |
+| May-08               | 16,423   | 15,769    |
+| Jun-08               | 96,536   | 57,520    |
+| Jul-08               | 115,981  | 96,075    |
+| Aug-08               | 115,300  | 109,549   |
+| Sep-08               | 3,036    | 22,868    |
+| Oct-08               | -25,549  | 6,489     |
+| Nov-08               | -13,828  | 26,594    |
+| Dec-08               | 66,061   | 87,718    |
+| | | |
+| Total                | 527,202  | 624,856   |
+
+Table: Delay trend IN/OUT in minute for the top (JetBlue Airways) carrier at JFK.
+
+
+---
+output: pdf_document
+---
+
+| Month  | American Airlines| JetBlue Airways | Delta Airlines  | Comair | Total|
+|--------|-----------------------------|----------------------|---------------------------|------------------|--------------------|
+| Jan-08 | 30                          | 55                   | 16                        | 63               | 164                |
+| Feb-08 | 42                          | 113                  | 27                        | 130              | 312                |
+| Mar-08 | 24                          | 72                   | 22                        | 83               | 201                |
+| Apr-08 | 36                          | 42                   | 6                         | 36               | 120                |
+| May-08 | 19                          | 10                   | 7                         | 22               | 58                 |
+| Jun-08 | 21                          | 141                  | 14                        | 84               | 260                |
+| Jul-08 | 41                          | 188                  | 29                        | 193              | 451                |
+| Aug-08 | 20                          | 197                  | 25                        | 203              | 445                |
+| Sep-08 | 15                          | 63                   | 19                        | 49               | 146                |
+| Oct-08 | 7                           | 18                   | 8                         | 15               | 48                 |
+| Nov-08 | 2                           | 37                   | 6                         | 33               | 78                 |
+| Dec-08 | 18                          | 127                  | 30                        | 121              | 296                |
+|--------|-----------------------------|----------------------|---------------------------|------------------|--------------------|
+| Total  | 275                         | 1,063                | 209                       | 1,032            | 2,579              |
+
+
+Table: Total Cancellations
 
 
 
