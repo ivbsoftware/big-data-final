@@ -23,7 +23,6 @@ affiliation:
 bibliography      : ["r-references.bib"]
 
 figsintext        : yes
-tabsintext        : no
 figurelist        : no
 tablelist         : no
 footnotelist      : no
@@ -103,17 +102,17 @@ apa_table(
 
 ## Model estimation
 Scope of performance measures will be limited on arriving domestic flights as follows:
-- Arrivals
-- Domestic flights
-- Number of flights
-- Number of passengers
-- Number of delays coming in / going out
-- Number of Cancellation
+ - Arrivals
+ - Domestic flights
+ - Number of flights
+ - Number of passengers
+ - Number of delays coming in / going out
+ - Number of Cancellation
 
 Apply financial estimates of the performance using available research/data on:
-- Lost revenues for cancelled flights at JFK
-- Estimate delay costs using European proxy studies adjusted for currency parity between Euro and USD
-- Publicly available blended load factor for airline group (i.e. United Airlines, American Airlines) as opposed to individual airline blended cost.
+ - Lost revenues for cancelled flights at JFK
+ - Estimate delay costs using European proxy studies adjusted for currency parity between Euro and USD
+ - Publicly available blended load factor for airline group (i.e. United Airlines, American Airlines) as opposed to individual airline blended cost.
 
 ## The process
 For the development of this project we are using CRoss-Industry Standard Process for Data Mining (CRISP-DM) (see Figure\ \@ref(fig:crisp-dm)) was developed by Daimler Chrysler (then Daimler-Benz), SPSS (then ISL) and NCR in 1999. Compiling the current proposal document is a part of this process (see Table 1), in it's preparation our team has conducted 2 iteration of the CRISP-DM process.
