@@ -22,7 +22,8 @@ affiliation:
 
 bibliography      : ["r-references.bib"]
 
-figsintext        : no
+figsintext        : yes
+tabsintext        : no
 figurelist        : no
 tablelist         : no
 footnotelist      : no
@@ -35,7 +36,6 @@ output            : papaja::apa6_pdf
 
 ```{r load_packages, include = FALSE}
 library("papaja")
-library("ggplot2")
 ```
 
 ```{r analysis_preferences}
@@ -44,35 +44,12 @@ set.seed(42)
 ```
 
 # Abstract
-
+The search for optimal assignment of flights to gates is of great importance to airport to elimate delays, maintain operations and maximize profits. In this paper the focus on the research is to determin the effects of airlines' performance on airport gate utilization on airport financials.
 An international airport is the most populated and busiest travel area where many people used to move around the world. Gate assignment is one of the most important tasks for airport ground operations, which assigns appropriate airport gates with high efficiency reasonable arrangement. 
 It is important to notice that flights delays and cancellation have a negative impact on airport performance and do not provide an excellent experience to travelers. This study aims to propose a new airport gate assignment method to effectively improve the comprehensive operation capacity and efficiency of John F. Kennedy International airport (JFK airport). 
 It will also help to optimize the number of gate allocated to each airline and improve travelers experience.
 
-
-
-In this paper the focus on the research is to determin the effects of airlines' performance on airport gate utilization on airport financials.
-
- 
-
 # Introduction
-This study will look at John F. Kennedy International Airport (JFK Airport). JFK Airport is located in the neighborhood of Jamaica in the borough of Queens, in New York, 30km (16 Miles) southeast of Midtown Manhattan.
-One of the busiest international air passenger airports in North America and the sixth busiest airpots in United States with close to 60 million passengers using the facility each year. 
-The airport features six passenger terminals and four runways, the over ninty airline carriers operate at airport using the more than 128 gates across the six passenger terminals.
-
-
-![alt text](https://binged.it/2sWBsfF)
-
-
-
-United State airline performance information from an eleven-year span has been retrieved from airlines transportation database. The datasets are from the year 1997 through to the year 2008.
-
-
-
-
-
-
-
 
 # Competitive Analysis
 In one research [@azmi_solving_2016], in order to solve discrete optimization problem, the SKF algorithm is combined with angle modulated approach. Airport gate allocation problem refers to the search for optimal assignment of flights to gates at an airport. Assignment of flight to gates has become very complex nowadays, especially for a big size airport. In this study, the airport gate allocation problem is solved using a recently introduced angle modulated simulated Kalman filter (AMSKF). The objective of this study is to minimize the total walking distance. A small case study with 14 flights and 16 gates has been chosen. Preliminary results show that SKF is a promising algorithm for solving the airport gate allocation problem.
@@ -95,16 +72,34 @@ Airport gate assignment is of great importance in airport operations. In this pa
 
 To help researched see how your airport is performing with FlightStats monthly On-time Performance Report, this report [@noauthor_airline_nodate] compares the on-time arrival performance of major and regional airports around the world .
 
-in that report [@noauthor_data_nodate] Load Factor (passenger-miles as a proportion of available seat-miles in percent ) for All Carriers and All Airports.
-
-Optimizing gate assignments at airport terminals is analysed in this article [@noauthor_optimizing_1998].
-
-Airline On-Time Statistics and Delay Causes is presented here [@noauthor_ost_r_nodate].
+The [@noauthor_data_nodate] report presents Load Factor (passenger-miles as a proportion of available seat-miles in percent ) for All Carriers and All Airports.
+Optimizing gate assignments at airport terminals is analysed in this article [@noauthor_optimizing_1998]. Airline On-Time Statistics and Delay Causes is presented here [@noauthor_ost_r_nodate].
 
 This thesis [@riedel_approach_2006] presents an approach for predicting operational performance of airlines on the basis of flight schedules and aircraft assignments. The methodology uses aggregate measures of properties of aircraft assignments, called Aircraft Assignment Key Performance Indicators (KPIs), and aims to find correlations between them and the operational performance of the airline. A simulation experiment is prepared to gather a large set of data points for analysis. A motivation is given for the use of control theoretic approaches in airline operations to utilize the KPIs as a basis for initial planning and corrective actions.
 
 # Proposed Plan
-The focus of this study will be John F. Kennedy Airport in New York.  The study will analyze airline gate operations performance measures over a 1997 to 2008 of publicly available data from bureau of transportation statistics.  These performance measures include the following:
+The focus of this study will be John F. Kennedy Airport in New York. The study will analyze airline gate operations performance measures over a 1997 to 2008 of publicly available data from bureau of transportation statistics. JFK Airport is located in the neighborhood of Jamaica in the borough of Queens, in New York, 30km (16 Miles) southeast of Midtown Manhattan. One of the busiest international air passenger airports in North America and the sixth busiest airpots in United States with close to 60 million passengers usint the facility a year (2016 data). The airport features six passenger terminals and four runways (see Figure\ \@ref(fig:jfk)). More than ninty airlines operate at JFK Airport using the more than 128 gates across six terminals. The focus of the research is to determine the effects of airlines' performance on airport gate utilization. 
+
+```{r jfk, fig.cap = "CRISP-DM Process Diagramm.", fig.align = "center", out.width = "0.75\\textwidth", fig.pos = "!h"}
+knitr::include_graphics("../../images/jfk-terminal-2-map.jpg")
+```
+
+## Data Insights
+Number of flights per carrier at New York John F. Kennedy Airport (JFK) (see Table\ \@ref(tab:numf)).
+
+```{r numf, results = 'asis', echo = FALSE}
+flights <- read.csv("../../data/NumFlights .csv", row.names = NULL)
+library("papaja")
+apa_table(
+  flights
+  , landscape = FALSE
+  , small = TRUE
+  , caption = "Number of flights per carrier at New York John F. Kennedy Airport (JFK)."
+  , note = "Month,JetBlue Airways (B6), Delta Air Lines Inc. (DL), Comair Inc. (OH), American Airlines Inc. (AA), Continental Air Lines Inc. (CO), American Eagle Airlines Inc. (MQ), United Air Lines Inc. (UA), Northwest Airlines Inc. (NW), US Airways Inc. (US), Mesa Airlines Inc. (YV), Atlantic Southeast Airlines (EV)"
+)
+```
+
+
 
 ## Model estimation
 Scope of performance measures will be limited on arriving domestic flights as follows:
@@ -122,6 +117,11 @@ Apply financial estimates of the performance using available research/data on:
 
 ## The process
 For the development of this project we are using CRoss-Industry Standard Process for Data Mining (CRISP-DM) (see Figure\ \@ref(fig:crisp-dm)) was developed by Daimler Chrysler (then Daimler-Benz), SPSS (then ISL) and NCR in 1999. Compiling the current proposal document is a part of this process (see Table 1), in it's preparation our team has conducted 2 iteration of the CRISP-DM process.
+
+```{r crisp-dm, fig.cap = "CRISP-DM Process Diagramm.", fig.align = "center", out.width ="0.75\\textwidth"}
+knitr::include_graphics("../../images/CRISP-DM_Process_Diagram.png")
+```
+
 
 \newpage
 
@@ -161,10 +161,6 @@ output: pdf_document
 |  |Review project|	|	||
 
 Table: Proposed Plan Phases
-
-```{r crisp-dm, fig.cap = "CRISP-DM Process Diagramm.", fig.align = "center", out.width = "\\textwidth", fig.pos = "!h"}
-knitr::include_graphics("../../images/CRISP-DM_Process_Diagram.png", dpi = 800)
-```
 
 # Potential Risks
 Use of assumptions including past performance to predict future performance.  Simplifying cost estimates such as aggregate load factors and blended costs.  Reliance of public data without management inputs.  Data did not exclude normalization of data for abnormal, one-time events.
