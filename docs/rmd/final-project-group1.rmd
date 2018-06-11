@@ -21,7 +21,7 @@ affiliation:
     institution   : "York University School of Continious Studies"
 
 author_note:
-  Big Data Analytics course CSDA1000SUMA18, Final Project Proposal, Group 1.
+  Big Data Analytics course CSDA1000SUMA18, Group 1, Final Project Proposal.
   
 abstract:
   Airport management comprises of a number of complex operations such as security, passenger check-ins, baggage management, taxiing, gate operations, retail, etc.  These operations have many stakeholder touchpoints but we can categorize them to three distinct but related stakeholders namely  the airport operator, the airlines and passengers.  Those multiple operations affect the both experience and financials of these stakeholders. Our research will focus on one specific operation, which is gate management. The primary focus of the project is to determine the how the customers  are affected by delays and cancellations and develop mathematical model based on the data analysys to maximize that number of passengers served through the gates.
@@ -80,14 +80,11 @@ knitr::include_graphics("../../images/jfk-terminal-2-map.jpg")
 ## Data Insights
 Information from 22 years has been retrieved from airlines transportation database. These datasets are from 1987 to 2008 and are relative to United State airlines performance, for the data description (see Table 1). As an example, for the year 2008, JFK airport has 118.804 flights from 11 different carriers. The top 4 most important carriers are JetBlue Airways with 45% of total traffic followed by Comair Inc. (16%), Delta Air Lines (14%) and American Airlines Inc. (10%). Number of flights per carrier at New York John F. Kennedy Airport (JFK) presented here (see Tables 2,3 and 5). For that analysis the following datasets were analyzed:
 
-- 1987-2008 US Flights statistics: 
-http://stat-computing.org/dataexpo/2009/the-data.html
- - 2015 US Flights statistics: 
-https://www.kaggle.com/usdot/flight-delays/data
- - 2008-2017 Aircraft registration databases: 
-https://www.faa.gov/licenses_certificates/aircraft_certification/aircraft_registry/releasable_aircraft_download/
- - SFO Gate and Stand Assignment Information: 
-https://catalog.data.gov/dataset/sfo-gate-and-stand-assignment-information
+ - Airline on-time performance reports [@noauthor_airline_nodate];
+ - 1987-2008 US Flights statistics [@noauthor_data_nodate];
+ - SFO Gate and Stand Assignment Information [@noauthor_sfo_nodate];
+ - 2015 US Flights statistics [@noauthor_2015_nodate];
+ - Aircraft registry [@noauthor_aircraft_nodate].
 
 ## Model estimation
 Our research will focus on the impact of this delays and cancellations to the airport.  What our research goal is to answer the following questions:
