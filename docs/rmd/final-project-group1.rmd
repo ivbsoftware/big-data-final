@@ -20,11 +20,11 @@ affiliation:
   - id            : "1"
     institution   : "York University School of Continious Studies"
 
-author_note: |
+author_note:
   Big Data Analytics course CSDA1000SUMA18, Final Project Proposal, Group 1.
   
-abstract: |
-Airport management comprises of a number of complex operations such as security, passenger check-ins, baggage management, taxiing, gate operations, retail, etc.  These operations have many stakeholder touchpoints but we can categorize them to three distinct but related stakeholders namely  the airport operator, the airlines and passengers.  Those multiple operations affect the both experience and financials of these stakeholders. Our research will focus on one specific operation, which is gate management. The primary focus of the project is to determine the how the customers  are affected by delays and cancellations and develop mathematical model based on the data analysys to maximize that number of passengers served through the gates.
+abstract:
+  Airport management comprises of a number of complex operations such as security, passenger check-ins, baggage management, taxiing, gate operations, retail, etc.  These operations have many stakeholder touchpoints but we can categorize them to three distinct but related stakeholders namely  the airport operator, the airlines and passengers.  Those multiple operations affect the both experience and financials of these stakeholders. Our research will focus on one specific operation, which is gate management. The primary focus of the project is to determine the how the customers  are affected by delays and cancellations and develop mathematical model based on the data analysys to maximize that number of passengers served through the gates.
 
 bibliography      : ["r-references.bib"]
 
