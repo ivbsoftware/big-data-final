@@ -1,5 +1,5 @@
 ---
-title             : "Airport Gate Assignment Optimization. Final Project Proposal - Group 1, course CSDA1000SUMA18"
+title             : "Airport Gate Assignment Optimization. , "
 shorttitle        : "Airport Gate Assignment Optimization"
 
 author: 
@@ -19,6 +19,12 @@ author:
 affiliation:
   - id            : "1"
     institution   : "York University School of Continious Studies"
+
+author_note: |
+  Big Data Analytics course CSDA1000SUMA18, Final Project Proposal, Group 1.
+  
+abstract: |
+Airport management comprises of a number of complex operations such as security, passenger check-ins, baggage management, taxiing, gate operations, retail, etc.  These operations have many stakeholder touchpoints but we can categorize them to three distinct but related stakeholders namely  the airport operator, the airlines and passengers.  Those multiple operations affect the both experience and financials of these stakeholders. Our research will focus on one specific operation, which is gate management. The primary focus of the project is to determine the how the customers  are affected by delays and cancellations and develop mathematical model based on the data analysys to maximize that number of passengers served through the gates.
 
 bibliography      : ["r-references.bib"]
 
@@ -41,14 +47,10 @@ library("papaja")
 # Seed for random number generation
 set.seed(42)
 ```
-
-# Abstract
-Airport management comprises of a number of complex operations such as security, passenger check-ins, baggage management, taxiing, gate operations, retail, etc.  These operations have many stakeholder touchpoints but we can categorize them to three distinct but related stakeholders namely  the airport operator, the airlines and passengers.  Those multiple operations affect the both experience and financials of these stakeholders. Our research will focus on one specific operation, which is gate management. The primary focus of the project is to determine the how the customers  are affected by delays and cancellations and develop mathematical model based on the data analysys to maximize that number of passengers served through the gates.
-
 # Introduction
 The search for optimal assignment of flights to gates is of great importance to airport to elimate delays, maintain operations and maximize profits. In this project the focus on the research is to determin the effects of airlines' performance on airport gate utilization on airport financials. An international airport is the most populated and busiest travel area where many people used to move around the world. Gate assignment is one of the most important tasks for airport ground operations, which assigns appropriate airport gates with high efficiency reasonable arrangement. It is important to notice that flights delays and cancellation have a negative impact on airport performance and do not provide an excellent experience to travelers. This study aims to propose a new airport gate assignment method to effectively improve the comprehensive operation capacity and efficiency. It will also help to optimize the number of gate allocated to each airline and improve travelers experience. 
 
-Gates are where planes park (in the apron), and where passengers disembark and get into the planes.  These are also the locations where passengers wait before getting into their flights. Airports managed gates though a negotiation with the airlines who advise or requests airports to set aside a certain number of gates (called gate allocations) for certain dates in the upcoming season.  In North America it is divided between the summer (May to Oct) and winter (Nov to April) seasons.  These negotiations are based on these two seasons.  The airports then do the gate allocation based on relationship with airlines, their flight history, their delay or cancellation profiles, etc. Airports analyze who to provide the gates then advise the airlines on what is the allocation to them.  Airlines develop their route schedules which you will eventually see in their websites and travel sites, etc..  Airports on the other hand, then do their resource planning according to this schedule.  Airports budget for personnel, get the necessary systems or services for systems, even spend for new facilities that need to be build around this schedule if needed – Capex program.  Sometimes, airport shuffling airlines around the gates and when other airlines affected, airports work with these airlines.
+Gates are where planes park (in the apron), and where passengers disembark and get into the planes.  These are also the locations where passengers wait before getting into their flights. Airports managed gates though a negotiation with the airlines who advise or requests airports to set aside a certain number of gates (called gate allocations) for certain dates in the upcoming season.  In North America it is divided between the summer (May to Oct) and winter (Nov to April) seasons.  These negotiations are based on these two seasons.  The airports then do the gate allocation based on relationship with airlines, their flight history, their delay or cancellation profiles, etc. Airports analyze who to provide the gates then advise the airlines on what is the allocation to them.  Airlines develop their route schedules which you will eventually see in their websites and travel sites, etc..  Airports on the other hand, then do their resource planning according to this schedule.  Airports budget for personnel, get the necessary systems or services for systems, even spend for new facilities that need to be build around this schedule if needed with Capex program.  Sometimes, airport shuffling airlines around the gates and when other airlines affected, airports work with these airlines.
 
 # Competitive Analysis
 The area of airport gates assignment is well researched. Several researches were trying to solve the problem taking into account multiple factors, like cost, passenger walking distances, networking of connected flights etc.
