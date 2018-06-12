@@ -22,9 +22,10 @@ affiliation:
 
 author_note:
   Big Data Analytics course CSDA1000SUMA18, Group 1, Final Project Proposal.
-  
+
 abstract:
-  Airport management comprises of a number of complex operations such as security, passenger check-ins, baggage management, taxiing, gate operations, retail, etc.  These operations have many touchpoints which can be categorize into three distinct but related stakeholders: the airport operator, the airlines and the passengers.  These multiple operations can affect the experience and financials of these stakeholders. Our research will focus on one specific operation, the optimization of gate management. The primary focus of the project is to determine how the passengers are affected by delays and cancellations, and develop a mathematical model based on data analysys in order to maximize the number of passengers served through gates.
+  Airport management comprises of a number of complex operations such as security, passenger check-ins, baggage management, taxiing, gate operations, retail, etc.  These operations have many touchpoints which can be categorize into three distinct but related stakeholders - the airport operator, the airlines and the passengers.  These multiple operations can affect the experience and financials of these stakeholders. Our research will focus on one specific operation, the optimization of gate management. The primary focus of the project is to determine how the passengers are affected by delays and cancellations, and develop a mathematical model based on data analysys in order to maximize the number of passengers served through gates.
+  
 
 bibliography      : ["r-references.bib"]
 
@@ -36,7 +37,7 @@ lineno            : no
 mask              : no
 linkcolor         : "blue"
 class             : "man"
-output            : papaja::apa6_pdf
+output            : papaja::apa6_word
 ---
 
 ```{r load_packages, include = FALSE}
@@ -60,7 +61,7 @@ In one research [@azmi_solving_2016], in order to solve discrete optimization pr
 
 Another paper [@barnhart_demand_2012] summarizes research trends and opportunities in the area of managing air transportation demand and capacity. Capacity constraints and resulting congestion and low schedule reliability currently impose large costs on airlines and their passengers. Significant capacity increases that would solve these problems are not expected in the near- or medium-term. This paper outlines first a number of directions for effecting improvement through marginal capacity increases and better management of demand and available capacity. It describes strategic initiatives that airlines and civil aviation authorities might undertake over time horizons of months to years as well as tactical measures that may be adopted on a daily basis in response to dynamic, real-time developments like poor weather or schedule disruptions. Research challenges in these areas are identified and classified in terms of specifying, allocating, and utilizing capacity. The first two categories reject challenges faced by infrastructure providers, the last category challenges faced by airlines.
 
-Others[@bihr_conceptual_1990] think that positioning of incoming flights should take into account the distribution of passengers among connecting flights. The larger the number of passengers arriving on flight X for destination A, the closer flight X should be positioned to the flight departing for A. This inquiry looks conceptually at this problem, reducing the distance passengers must walk from gate to gate. The criterion selected is minimization of the total passenger-distance travel for a given arrival-departure cycle. The problem can be conveniently cast as a 0,1 Linear Programming (LP) problem].
+Others [@bihr_conceptual_1990] think that positioning of incoming flights should take into account the distribution of passengers among connecting flights. The larger the number of passengers arriving on flight X for destination A, the closer flight X should be positioned to the flight departing for A. This inquiry looks conceptually at this problem, reducing the distance passengers must walk from gate to gate. The criterion selected is minimization of the total passenger-distance travel for a given arrival-departure cycle. The problem can be conveniently cast as a 0,1 Linear Programming (LP) problem].
 
 Another paper [@ding_airport_nodate] studies the over-constrained Airport Gate Assignment Problem, where the objectives are to minimize the number of ungated flights and the total walking distances or connection times. They approach the problem by first using a greedy algorithm to minimize ungated flights and by developing exchange moves which then facilitate the use of heuristics. Simulated Annealing and a hybrid of Simulated Annealing and Tabu Search are used.
 
@@ -72,14 +73,18 @@ The [@noauthor_data_nodate] report presents Load Factor (passenger-miles as a pr
 The research [@riedel_approach_2006] presents an approach for predicting operational performance of airlines on the basis of flight schedules and aircraft assignments. The methodology uses aggregate measures of properties of aircraft assignments, called Aircraft Assignment Key Performance Indicators (KPIs), and aims to find correlations between them and the operational performance of the airline. A simulation experiment is prepared to gather a large set of data points for analysis. A motivation is given for the use of control theoretic approaches in airline operations to utilize the KPIs as a basis for initial planning and corrective actions.
 
 # Proposed Plan
-The focus of this project will be on one United States (US) major airports - either John F. Kennedy Airport in New York or San Francisco Airport (SFO) depending on the data availability. The study will analyze airline gate operations performance measures over a 1997 to 2008 of publicly available data from bureau of transportation statistics. 
+The focus of this project will be on one United States (US) major airports - either John F. Kennedy Airport in New York [@noauthor_john_2018] or San Francisco Airport (SFO) [@noauthor_san_2018] depending on the data availability. The study will analyze airline gate operations performance measures over a 1997 to 2008 of publicly available data from bureau of transportation statistics. 
 JFK Airport is located in the neighborhood of Jamaica in the borough of Queens, in New York, 30km (16 Miles) southeast of Midtown Manhattan. One of the busiest international air passenger airports in North America and the sixth busiest airpots in United States with close to 60 million passengers using the facility a year (2016 data). The airport features six passenger terminals and four runways (see Figure\ \@ref(fig:jfk)). More than ninty airlines operate at JFK Airport using the more than 128 gates across six terminals. 
-San Francisco International Airport (SFO) is an international airport 21 km (13 miles) south of downtown San Francisco, California, United States, near Millbrae and San Bruno in unincorporated San Mateo County. It has flights to points throughout North America and is a major gateway to Europe and Asia. SFO is the largest airport in Northern California and the second-busiest in California, after Los Angeles International Airport. In 2017, it was the seventh busiest in the United States and the twenty-forth busiest airport in the world by passenger count. SFO has four terminals (1, 2, 3, and International) and seven concourses (Boarding Areas A through G) with a total of 115 gates arranged alphabetically in a counterclockwise ring. (see Figure\ \@ref(fig:SFO))
+San Francisco International Airport (SFO) is an international airport 21 km (13 miles) south of downtown San Francisco, California, United States, near Millbrae and San Bruno in unincorporated San Mateo County. It has flights to points throughout North America and is a major gateway to Europe and Asia. SFO is the largest airport in Northern California and the second-busiest in California, after Los Angeles International Airport. In 2017, it was the seventh busiest in the United States and the twenty-forth busiest airport in the world by passenger count. SFO has four terminals (1, 2, 3, and International) and seven concourses (Boarding Areas A through G) with a total of 115 gates arranged alphabetically in a counterclockwise ring. (see Figure\ \@ref(fig:sfo))
 
 The primary focus is to determine how the passengers are affected by delays and cancellations, and develop a mathematical model based on data analysys in order to maximize the number of passengers served through gates. 
 
-```{r jfk, fig.cap = "CRISP-DM Process Diagramm.", fig.align = "center", out.width = "0.75\\textwidth", fig.pos = "!h"}
+```{r jfk, fig.cap = "John F. Kennedy Airport in New York (JFK).", fig.align = "center", out.width = "0.75\\textwidth", fig.pos = "!h"}
 knitr::include_graphics("../../images/jfk-terminal-2-map.jpg")
+```
+
+```{r sfo, fig.cap = "San Francisco Airport (SFO).", fig.align = "center", out.width = "0.75\\textwidth", fig.pos = "!h"}
+knitr::include_graphics("../../images/SFO_overview_map.jpg")
 ```
 
 ## Data Insights
@@ -199,7 +204,7 @@ apa_table(
   , landscape = FALSE
   , small = TRUE
   , caption = "Number of flights per carrier at New York John F. Kennedy Airport (JFK)."
-  , note = "Month,JetBlue Airways (B6), Delta Air Lines Inc. (DL), Comair Inc. (OH), American Airlines Inc. (AA), Continental Air Lines Inc. (CO), American Eagle Airlines Inc. (MQ), United Air Lines Inc. (UA), Northwest Airlines Inc. (NW), US Airways Inc. (US), Mesa Airlines Inc. (YV), Atlantic Southeast Airlines (EV)"
+  , note = "JetBlue Airways (B6), Delta Air Lines Inc. (DL), Comair Inc. (OH), American Airlines Inc. (AA), Continental Air Lines Inc. (CO), American Eagle Airlines Inc. (MQ), United Air Lines Inc. (UA), Northwest Airlines Inc. (NW), US Airways Inc. (US), Mesa Airlines Inc. (YV), Atlantic Southeast Airlines (EV)"
 )
 ```
 
@@ -262,12 +267,12 @@ output: pdf_document
 | Phase| Task Name  | Schedule  | Resources | Status |
 |--|--|--|--|--|
 |Business understanding  || 3 days | All analysts |Completed|	
-|Data understanding  |  | 2 days |Business analysts|In progress|
+|Data understanding  |  | 2 days | BA |In progress|
 |  | Data collection |  |	|Completed|
 |  | Data description |  | |Completed|
 |  | Data quality check |  |	|In progress|
 |  | Exploratory analysis|  |	|In progress|
-|Data preparation  |  | 2 days |Business analysts\Modelers	|In progress|
+|Data preparation  |  | 2 days | BA\\Modelers	| In progress |
 |  | Selection |  |	|2 iterations|
 |  | Cleaning|  |	|2 iterations|
 |  | Construction|	|	|2 iterations|
@@ -284,10 +289,10 @@ output: pdf_document
 |  | Review of process| |	||
 |  | Determine actions|	|	||
 |  | Refine and repeat  |	|All analysts	||
-|Deployment  |  | 1 day	|Modelers\Project Mng	|Not started|
+|Deployment  |  | 1 day	|Modelers\\PM|Not started|
 |  |Deployment plan|	|	Modelers||
-|  |Maintenance plan  |	|Project Mng	||
-|  |Final report  | |Modelers\Project Mng	||
-|  |Review project|	|	Project Mng||
+|  |Maintenance plan  |	|PM	||
+|  |Final report  | |Modelers\\PM	||
+|  |Review project|	|	PM||
 
 Table: Proposed Plan Phases
