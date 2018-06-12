@@ -96,19 +96,19 @@ Our research will focus on the impact of this delays and cancellations to the ai
 
  - What are the impacts of airline delays on gate management  specifically on the following:
     - What is the current baseline of delay and cancelled events in terms of number of instances, flights and instances (Quantify and create a baseline)
-    -	Which airlines cause these delays?
-    -	What are the causes of these delays?
-    - What is the impact of these delays into gate utilization
-    - What is the estimated number of passengers affected by delays and cancellations
-    - In the ballpark, what are the the financial costs, of delays and cancellation
+    - Which airlines cause these delays?
+    - What are the causes of these delays?
+    - What is the impact of these delays into gate utilization?
+    - What is the estimated number of passengers affected by delays and cancellations?
+    - In the ballpark, what are the the financial costs, of delays and cancellation?
 
- - What is the future forecasted airline delays  
+ - What is the future forecasted airline delays?  
     - Using historical data and linear progressing, what will be the estimated future delays and cancellations in the next 5, 10, 20 years?
-    - Combining historical data and using scenario analysis of varying growths for each airlines, what is the estimated future delays and cancellations in the next 5, 10, 20 years  using Monte Carlo Analysis
-    - What is the estimated the potential impact of number of customers affected and financial costs of these future delay s and cancellations
+    - Combining historical data and using scenario analysis of varying growths for each airlines, what is the estimated future delays and cancellations in the next 5, 10, 20 years using Monte Carlo Analysis;
+    - What is the estimated potential impact of number of customers affected and financial costs of these future delays and cancellations?
  - What should the airport consider as options to address potential future scenarios?
 
-As the result of this analysis we are planning to build a model based on one of the variations of Linear Programming to optimize the gate allocation. The required for that methodology cost function will be developed after thorough data analysis where we are planning to use Linear Regression to extract behaioral parameters of airlines from the historical data.
+As the result of this analysis we are planning to build a model based on one of the variations of Linear Programming to optimize the gate allocation. The required methodology cost function will be developed after thorough data analysis where we are planning to use Linear Regression to extract behavioral parameters of airlines from the historical data.
 
 ## The process
 For the development of this project we are using CRoss-Industry Standard Process for Data Mining (CRISP-DM) (see Figure\ \@ref(fig:crisp-dm)) was developed by Daimler Chrysler (then Daimler-Benz), SPSS (then ISL) and NCR in 1999. Compiling the current proposal document is a part of this process (see Table 2), in it's preparation our team has conducted 2 iteration of the CRISP-DM process.
@@ -123,7 +123,7 @@ Use of assumptions including past performance to predict future performance.  Si
 # Cost/benefit analysis
 Understanding gate performance of airlines enable airport management to proper plan airline gate assignments optimally that reduces lost revenues, maximizes the use of gate facilities and defers/avoids expansion of capex due to inefficient use. 
 
-If airlines perform as what was agreed with the airport, then the gates are managed optimally. However, there are instances when a number of flights, get delayed or even cancelled.  There are various reasons for these delays.  It could be the weather-related, security reason, or natural calamity or sometimes it is the airline (i.e. bad plan, route did not have enough passenger, labour strike, non-payment of leases (these planes are mostly leased financed). 
+If airlines perform as what is agreed to with an airport, then the gates are managed optimally. However, there are instances when a number of flights, get delayed or even cancelled.  There are various reasons for these delays.  It could be the weather-related, security reason, or natural calamity or sometimes it is the airline (i.e. bad plan, route did not have enough passenger, labour strike, non-payment of leases (these planes are mostly leased financed). 
 
 When there is a delay or cancellation, the impact is two-fold from the point of view of the airport.  First, customer (passenger) experience suffers.  The second is that the airport would incur both actual cost (the personnel it hired, capex spent if applicable, deicing, electricity, use of systems, etc.), revenue lost (landing fees, terminal fees), and opportunity cost (airport could have given that particular gate to another airline).
 
