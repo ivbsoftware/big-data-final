@@ -48,6 +48,28 @@ library("papaja")
 # Seed for random number generation
 set.seed(42)
 ```
+# Table of Contents
+[Introduction](#introduction) . . . . . . . . . . 2
+
+[Competitive Analysis](#competitive-analysis)
+
+[Proposed Plan](#proposed-plan)
+  * [Data Insights](#data-insights)
+  * [Model estimation](#model-estimation)
+  * [The process](#the-process)
+  
+[Potential Risks](#potential-risks)
+
+[Cost/benefit analysis](#costbenefit-analysis)
+
+[Conclusion](#conclusion)
+
+[References](#references)
+
+[Tables](#tables)
+
+\newpage
+
 # Introduction
 An international airport is the most populated and busiest travel location to move people around the world. Gate assignment is an imperative task for an airports ground operations; and the search for an optimal assignment of flights to gates is of great importance to eliminate delays, maintain operations with high efficiency and reasonable arrangement, and to maximize profits. It is significant to notice that flight delays and cancellations have a negative impact on airport performance and do not provide an excellent experience to travelers. This project aims to propose a new airport gate assignment method to effectively improve the comprehensive operations capacity and efficiency. The project will also aid in optimizing the number of gates allocated to airline carriers to improve the travelers experience.
 
