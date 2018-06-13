@@ -37,7 +37,7 @@ lineno            : no
 mask              : no
 linkcolor         : "blue"
 class             : "man"
-output            : papaja::apa6_word
+output            : papaja::apa6_pdf
 ---
 
 ```{r load_packages, include = FALSE}
@@ -49,24 +49,28 @@ library("papaja")
 set.seed(42)
 ```
 # Table of Contents
-[Introduction](#introduction) . . . . . . . . . . 2
 
-[Competitive Analysis](#competitive-analysis)
+[Introduction](#introduction) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4
 
-[Proposed Plan](#proposed-plan)
-  * [Data Insights](#data-insights)
-  * [Model estimation](#model-estimation)
-  * [The process](#the-process)
-  
-[Potential Risks](#potential-risks)
+[Competitive Analysis](#competitive-analysis). . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5
 
-[Cost/benefit analysis](#costbenefit-analysis)
+[Proposed Plan](#proposed-plan). . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 7
 
-[Conclusion](#conclusion)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Data Insights](#data-insights). . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 8
 
-[References](#references)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Model estimation](#model-estimation) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9
 
-[Tables](#tables)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[The process](#the-process) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 10
+    
+[Potential Risks](#potential-risks) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 10
+
+[Cost/benefit analysis](#costbenefit-analysis) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .10
+
+[Conclusion](#conclusion) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .11
+
+[References](#references) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .12
+
+[Tables](#tables) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 14
 
 \newpage
 
@@ -275,7 +279,7 @@ output: pdf_document
 | Oct-08 | 7   | 18     | 8   | 15     | 48    |
 | Nov-08 | 2   | 37     | 6   | 33     | 78    |
 | Dec-08 | 18  | 127    | 30  | 121    | 296   |
-|--------|-----|--------|-----|--------|-------|
+|||||||
 | Total  | 275 | 1,063  | 209 | 1,032  | 2,579 |
 
 Table: Total Cancellations
