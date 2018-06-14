@@ -23,5 +23,5 @@ We need to extract the following information that will be used in LP model:
  - Number of flights per week for each airline;
  - Estimation of number of passengers per week brought by each airline.
  Can be calculated by types of planes used by each airline on the terminal, max number of passengers in each. We have all data to extract this;
- - Prediction of ailines performance for next summer season. What I need here is a number
+ - Prediction of airlines performance for next summer season. What I need here is a number
  between 0..1 that reflects airline reliability in relation to what was promiced (use delays, cancellations etc).
