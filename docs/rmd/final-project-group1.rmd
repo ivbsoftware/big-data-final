@@ -1,6 +1,6 @@
 ---
-title             : "Final Project Proposal - Group 1, course CSDA1000SUMA18"
-shorttitle        : "Final Project Proposal"
+title             : "Airport Gate Assignment Optimization"
+shorttitle        : "Airport Gate Assignment Optimization"
 
 author: 
   - name          : "Viviane Adohouannon"
@@ -20,6 +20,13 @@ affiliation:
   - id            : "1"
     institution   : "York University School of Continious Studies"
 
+author_note:
+  Big Data Analytics course CSDA1000SUMA18, Group 1, Final Project Proposal.
+
+abstract:
+  Airport management comprises of a number of complex operations such as security, passenger check-ins, baggage management, taxiing, gate operations, retail, etc.  These operations have many touchpoints which can be categorize into three distinct but related stakeholders - the airport operator, the airlines and the passengers.  These multiple operations can affect the experience and financials of these stakeholders. Our research will focus on one specific operation, the optimization of gate management. The primary focus of the project is to determine how the passengers are affected by delays and cancellations, and develop a mathematical model based on data analysys in order to maximize the number of passengers served through gates.
+  
+
 bibliography      : ["r-references.bib"]
 
 figsintext        : no
@@ -35,22 +42,23 @@ output            : papaja::apa6_pdf
 
 ```{r load_packages, include = FALSE}
 library("papaja")
-library("ggplot2")
 ```
 
 ```{r analysis_preferences}
 # Seed for random number generation
 set.seed(42)
 ```
+# Table of Contents
 
-# Abstract
+[Introduction](#introduction) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4
 
-An international airport is the most populated and busiest travel area where many people used to move around the world. Gate assignment is one of the most important tasks for airport ground operations, which assigns appropriate airport gates with high efficiency reasonable arrangement. 
-It is important to notice that flights delays and cancellation have a negative impact on airport performance and do not provide an excellent experience to travelers. This study aims to propose a new airport gate assignment method to effectively improve the comprehensive operation capacity and efficiency of John F. Kennedy International airport (JFK airport). 
-It will also help to optimize the number of gate allocated to each airline and improve travelers experience.
+[Competitive Analysis](#competitive-analysis). . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5
 
+[Proposed Plan](#proposed-plan). . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 7
 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Data Insights](#data-insights). . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 8
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 What are the effects of the different airlines performance on airport gate utilization. 
 =======
@@ -58,122 +66,105 @@ In this paper the focus on the research is to determin the effects of airlines' 
 
  
 >>>>>>> 474400c9204ccff39600c6aea01357ef40568991
+=======
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Model estimation](#model-estimation) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[The process](#the-process) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 10
+    
+[Potential Risks](#potential-risks) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 10
+>>>>>>> e14eec10ea1bd8c12f8c7183456b5a5367929454
+
+[Cost/benefit analysis](#costbenefit-analysis) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .10
+
+[Conclusion](#conclusion) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .11
+
+[References](#references) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .12
+
+[Tables](#tables) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 14
+
+\newpage
 
 # Introduction
-This study will look at John F. Kennedy International Airport (JFK Airport). JFK Airport is located in the neighborhood of Jamaica in the borough of Queens, in New York, 30km (16 Miles) southeast of Midtown Manhattan.
-One of the busiest international air passenger airports in North America and the sixth busiest airpots in United States with close to 60 million passengers using the facility each year. 
-The airport features six passenger terminals and four runways, the over ninty airline carriers operate at airport using the more than 128 gates across the six passenger terminals.
+An international airport is the most populated and busiest travel location to move people around the world. Gate assignment is an imperative task for an airports ground operations; and the search for an optimal assignment of flights to gates is of great importance to eliminate delays, maintain operations with high efficiency and reasonable arrangement, and to maximize profits. It is significant to notice that flight delays and cancellations have a negative impact on airport performance and do not provide an excellent experience to travelers. This project aims to propose a new airport gate assignment method to effectively improve the comprehensive operations capacity and efficiency. The project will also aid in optimizing the number of gates allocated to airline carriers to improve the travelers experience.
+
+Airplanes are parked at gates (in the apron) and where passengers wait to board and disembark from these planes. Airports managed gates though a negotiation with the airline carrier who request or advise airports to set aside a certain number of gates (called gate allocations) for dates in the upcoming seasons. In North America, seasons are divided between the summer months (May to Oct) and winter months (Nov to April). These negotiations are based on these two seasons. Airports prepare gate allocations based on the relationship with the airlines, their flight history, their delay or cancellation profiles, etc. Airports will analyze the data, assign the appropriate number of gates and advise the airline of their gate allocations. Airlines will develop their flight route schedules which will be made available to the public through their websites, travel sites, T.V. commercials, etc.; and Airports will do their resource planning according to the airlines schedule. Airports budget for personnel, get the necessary systems or services for systems, even spend for new facilities that need to be built around this schedule if needed with a CAPEX program. Sometimes, an airport may shuffle airlines around gates and when other airlines are affected, airports will work with these airlines.
 
 
-![alt text](https://binged.it/2sWBsfF)
+# Competitive Analysis
+The area of airport gates assignment optimization is well researched. Several researches were aiming to solve the problem considering multiple factors, like cost, passenger walking distances, networking of connected flights etc.
 
-
-
-United State airline performance information from an eleven-year span has been retrieved from airlines transportation database. The datasets are from the year 1997 through to the year 2008.
-
-
-
-
+<<<<<<< HEAD
 <<<<<<< HEAD
 The focus of the research is to determine the effect of airlines' gate utilization performance on airport airport's financials.
 The study will look at John F. Kennedy International Airport (JFK).  JFK Airport is one of the busiest airports in the United States with close 
 to 60 million passengers (2016 data).  More than 90 airlines operate at JFK Airport using the more than 128 gates across six terminals.
 =======
 >>>>>>> 474400c9204ccff39600c6aea01357ef40568991
-
-
-
-
-# Competitive Analysis
+=======
 In one research [@azmi_solving_2016], in order to solve discrete optimization problem, the SKF algorithm is combined with angle modulated approach. Airport gate allocation problem refers to the search for optimal assignment of flights to gates at an airport. Assignment of flight to gates has become very complex nowadays, especially for a big size airport. In this study, the airport gate allocation problem is solved using a recently introduced angle modulated simulated Kalman filter (AMSKF). The objective of this study is to minimize the total walking distance. A small case study with 14 flights and 16 gates has been chosen. Preliminary results show that SKF is a promising algorithm for solving the airport gate allocation problem.
+>>>>>>> e14eec10ea1bd8c12f8c7183456b5a5367929454
 
-Another paper [@barnhart_demand_2012] summarizes research trends and opportunities in the area of managing air transportation demand and capacity. Capacity constraints and resulting congestion and low schedule reliability currently impose large costs on airlines and their passengers. Significant capacity increases that would solve these problems are not expected in the near- or medium-term. This paper outlines first a number of directions for effecting improvement through marginal capacity increases and better management of demand and available capacity. It then describes strategic initiatives that airlines and civil aviation authorities might undertake over time horizons of months to years as well as tactical measures that may be adopted on a daily basis in response to dynamic, real-time developments like poor weather or schedule disruptions. Research challenges in these areas are identified and classified in terms of specifying, allocating, and utilizing capacity. The first two categories reject challenges faced by infrastructure providers, the last category challenges faced by airlines.
+Another paper [@barnhart_demand_2012] summarizes research trends and opportunities in the area of managing air transportation demand and capacity. Capacity constraints and resulting congestion and low schedule reliability currently impose large costs on airlines and their passengers. Significant capacity increases that would solve these problems are not expected in the near- or medium-term. This paper outlines first a number of directions for effecting improvement through marginal capacity increases and better management of demand and available capacity. It describes strategic initiatives that airlines and civil aviation authorities might undertake over time horizons of months to years as well as tactical measures that may be adopted on a daily basis in response to dynamic, real-time developments like poor weather or schedule disruptions. Research challenges in these areas are identified and classified in terms of specifying, allocating, and utilizing capacity. The first two categories reject challenges faced by infrastructure providers, the last category challenges faced by airlines.
 
-Others[@bihr_conceptual_1990] think that positioning of incoming flights should take into account the distribution of passengers among connecting flights. The larger the number of passengers arriving on flight X for destination A, the closer flight X should be positioned to the flight departing for A. This inquiry looks conceptually at this problem, reducing the distance passengers must walk from gate to gate. The criterion selected is minimization of the total passenger-distance travel for a given arrival-departure cycle. The problem can be conveniently cast as a 0,1 Linear Programming (LP) problem].
+Others [@bihr_conceptual_1990] think that positioning of incoming flights should take into account the distribution of passengers among connecting flights. The larger the number of passengers arriving on flight X for destination A, the closer flight X should be positioned to the flight departing for A. This inquiry looks conceptually at this problem, reducing the distance passengers must walk from gate to gate. The criterion selected is minimization of the total passenger-distance travel for a given arrival-departure cycle. The problem can be conveniently cast as a 0,1 Linear Programming (LP) problem].
 
-One report [@cook_european_nodate] is an update and extension of work published in 2004, also produced by
-the University of Westminster. This new report takes into account, as far as possible,
-relevant changes in the economic and regulatory environment since the earlier work.
-Whilst account has also been taken of the limited literature since 2004, the authors are
-not aware of any other new work comprehensively addressing European airline delay
-costs. Cost comparisons between the values reported earlier and the 2010 values are
-in unadjusted Euros, unless stated otherwise.
+Another paper [@ding_airport_nodate] studies the over-constrained Airport Gate Assignment Problem, where the objectives are to minimize the number of ungated flights and the total walking distances or connection times. They approach the problem by first using a greedy algorithm to minimize ungated flights and by developing exchange moves which then facilitate the use of heuristics. Simulated Annealing and a hybrid of Simulated Annealing and Tabu Search are used.
 
-In another paper [@ding_airport_nodate] the over-constrained Airport Gate Assignment Problem was studied, where the objectives are to minimize the number of ungated flights and the total walking distances or connection times. They approach the problem by first using a greedy algorithm to minimize ungated flights and by developing exchange moves which then facilitate the use of heuristics. Simulated Annealing and a hybrid of Simulated Annealing and Tabu Search are used.
+Airport gate assignment is of great importance in airport operations. In the paper [@li_airport_nodate], the authors studied the Airport Gate Assignment Problem (AGAP), propose a new model and implement the model with Optimization Programming language (OPL). With the objective to minimize the number of conflicts of any two adjacent aircrafts assigned to the same gate, the authors build a mathematical model with logical constraints and the binary constraints, which can provide an efficient evaluation criterion for the Airlines to estimate the current gate assignment. To illustrate the feasibility of the model the authors construct experiments with the data obtained from Continental Airlines, Houston Gorge Bush Intercontinental Air-port IAH, which indicate that our model is both energetic and effective. Moreover, the authors interpret experimental results, which further demonstrate that the proposed model can provide a powerful tool for airline companies to estimate the efficiency of their current work of gate assignment.
 
-Airport gate assignment is of great importance in airport operations. In this paper [@li_airport_nodate], the authors studied the Airport Gate Assignment Problem (AGAP), propose a new model and implement the model with Optimization Programming language (OPL). With the objective to minimize the number of conflicts of any two adjacent aircrafts assigned to the same gate, the authors build a mathematical model with logical constraints and the binary constraints, which can provide an efficient evaluation criterion for the Airlines to estimate the current gate assignment. To illustrate the feasibility of the model the authors construct experiments with the data obtained from Continental Airlines, Houston Gorge Bush Intercontinental Air-port IAH, which indicate that our model is both energetic and effective. Moreover, the authors interpret experimental results, which further demonstrate that our proposed model can provide a powerful tool for airline companies to estimate the efficiency of their current work of gate assignment.
+To help researched see how airports are performing with FlightStats monthly On-time Performance Report, the report [@noauthor_airline_nodate] compares the on-time arrival performance of major and regional airports around the world.
+The [@noauthor_data_nodate] report presents Load Factor (passenger-miles as a proportion of available seat-miles in percent ) for All Carriers and All Airports. Optimizing gate assignments at airport terminals is analysed in this article [@noauthor_optimizing_1998]. Airline On-Time Statistics and Delay Causes is presented here [@noauthor_ost_r_nodate].
 
-To help researched see how your airport is performing with FlightStats monthly On-time Performance Report, this report [@noauthor_airline_nodate] compares the on-time arrival performance of major and regional airports around the world .
-
-in that report [@noauthor_data_nodate] Load Factor (passenger-miles as a proportion of available seat-miles in percent ) for All Carriers and All Airports.
-
-Optimizing gate assignments at airport terminals is analysed in this article [@noauthor_optimizing_1998].
-
-Airline On-Time Statistics and Delay Causes is presented here [@noauthor_ost_r_nodate].
-
-This thesis [@riedel_approach_2006] presents an approach for predicting operational performance of airlines on the basis of flight schedules and aircraft assignments. The methodology uses aggregate measures of properties of aircraft assignments, called Aircraft Assignment Key Performance Indicators (KPIs), and aims to find correlations between them and the operational performance of the airline. A simulation experiment is prepared to gather a large set of data points for analysis. A motivation is given for the use of control theoretic approaches in airline operations to utilize the KPIs as a basis for initial planning and corrective actions.
+The research [@riedel_approach_2006] presents an approach for predicting operational performance of airlines on the basis of flight schedules and aircraft assignments. The methodology uses aggregate measures of properties of aircraft assignments, called Aircraft Assignment Key Performance Indicators (KPIs), and aims to find correlations between them and the operational performance of the airline. A simulation experiment is prepared to gather a large set of data points for analysis. A motivation is given for the use of control theoretic approaches in airline operations to utilize the KPIs as a basis for initial planning and corrective actions.
 
 # Proposed Plan
-The focus of this study will be John F. Kennedy Airport in New York.  The study will analyze airline gate operations performance measures over a 1997 to 2008 of publicly available data from bureau of transportation statistics.  These performance measures include the following:
+The focus of this project will be on one United States (US) major airports - either John F. Kennedy Airport in New York [@noauthor_john_2018] or San Francisco Airport (SFO) [@noauthor_san_2018] depending on the data availability. The study will analyze airline gate operations performance measures over a 1997 to 2008 of publicly available data from bureau of transportation statistics. 
+JFK Airport is located in the neighborhood of Jamaica in the borough of Queens, in New York, 30km (16 Miles) southeast of Midtown Manhattan. One of the busiest international air passenger airports in North America and the sixth busiest airpots in United States with close to 60 million passengers using the facility a year (2016 data). The airport features six passenger terminals and four runways (see Figure\ \@ref(fig:jfk)). More than ninty airlines operate at JFK Airport using the more than 128 gates across six terminals. 
+San Francisco International Airport (SFO) is an international airport 21 km (13 miles) south of downtown San Francisco, California, United States, near Millbrae and San Bruno in unincorporated San Mateo County. It has flights to points throughout North America and is a major gateway to Europe and Asia. SFO is the largest airport in Northern California and the second-busiest in California, after Los Angeles International Airport. In 2017, it was the seventh busiest in the United States and the twenty-forth busiest airport in the world by passenger count. SFO has four terminals (1, 2, 3, and International) and seven concourses (Boarding Areas A through G) with a total of 115 gates arranged alphabetically in a counterclockwise ring. (see Figure\ \@ref(fig:sfo))
+
+The primary focus is to determine how the passengers are affected by delays and cancellations, and develop a mathematical model based on data analysys in order to maximize the number of passengers served through gates. 
+
+```{r jfk, fig.cap = "John F. Kennedy Airport in New York (JFK).", fig.align = "center", out.width = "0.75\\textwidth", fig.pos = "!h"}
+knitr::include_graphics("../../images/jfk-terminal-2-map.jpg")
+```
+
+```{r sfo, fig.cap = "San Francisco Airport (SFO).", fig.align = "center", out.width = "0.75\\textwidth", fig.pos = "!h"}
+knitr::include_graphics("../../images/SFO_overview_map.jpg")
+```
+
+## Data Insights
+Information from 22 years has been retrieved from airlines transportation database. These datasets are from 1987 to 2008 and are relative to United State airlines performance, for the data description (see Table 1). As an example, for the year 2008, JFK airport has 118.804 flights from 11 different carriers. The top 4 most important carriers are JetBlue Airways with 45% of total traffic followed by Comair Inc. (16%), Delta Air Lines (14%) and American Airlines Inc. (10%). Number of flights per carrier at New York John F. Kennedy Airport (JFK) presented here (see Tables 2,3 and 5). For that analysis the following datasets were analyzed:
+
+ - Airline on-time performance reports [@noauthor_airline_nodate];
+ - 1987-2008 US Flights statistics [@noauthor_data_nodate];
+ - SFO Gate and Stand Assignment Information [@noauthor_sfo_nodate];
+ - 2015 US Flights statistics [@noauthor_2015_nodate];
+ - Aircraft registry [@noauthor_aircraft_nodate].
 
 ## Model estimation
-Scope of performance measures will be limited on arriving domestic flights as follows:
-- Arrivals
-- Domestic flights
-- Number of flights
-- Number of passengers
-- Number of delays coming in / going out
-- Number of Cancellation
+Our research will focus on the impact of this delays and cancellations to the airport.  What our research goal is to answer the following questions:
 
-Apply financial estimates of the performance using available research/data on:
-- Lost revenues for cancelled flights at JFK
-- Estimate delay costs using European proxy studies adjusted for currency parity between Euro and USD
-- Publicly available blended load factor for airline group (i.e. United Airlines, American Airlines) as opposed to individual airline blended cost.
+ - What are the impacts of airline delays on gate management  specifically on the following:
+    - What is the current baseline of delay and cancelled events in terms of number of instances, flights and instances (Quantify and create a baseline)
+    - Which airlines cause these delays?
+    - What are the causes of these delays?
+    - What is the impact of these delays into gate utilization?
+    - What is the estimated number of passengers affected by delays and cancellations?
+    - In the ballpark, what are the the financial costs, of delays and cancellation?
+
+ - What is the future forecasted airline delays?  
+    - Using historical data and linear progressing, what will be the estimated future delays and cancellations in the next 5, 10, 20 years?
+    - Combining historical data and using scenario analysis of varying growths for each airlines, what is the estimated future delays and cancellations in the next 5, 10, 20 years using Monte Carlo Analysis;
+    - What is the estimated potential impact of number of customers affected and financial costs of these future delays and cancellations?
+ - What should the airport consider as options to address potential future scenarios?
+
+As the result of this analysis we are planning to build a model based on one of the variations of Linear Programming to optimize the gate allocation. The required methodology cost function will be developed after thorough data analysis where we are planning to use Linear Regression to extract behavioral parameters of airlines from the historical data.
 
 ## The process
-For the development of this project we are using CRoss-Industry Standard Process for Data Mining (CRISP-DM) (see Figure\ \@ref(fig:crisp-dm)) was developed by Daimler Chrysler (then Daimler-Benz), SPSS (then ISL) and NCR in 1999. Compiling the current proposal document is a part of this process (see Table 1), in it's preparation our team has conducted 2 iteration of the CRISP-DM process.
+For the development of this project we are using CRoss-Industry Standard Process for Data Mining (CRISP-DM) (see Figure\ \@ref(fig:crisp-dm)) was developed by Daimler Chrysler (then Daimler-Benz), SPSS (then ISL) and NCR in 1999. Compiling the current proposal document is a part of this process (see Table 2), in it's preparation our team has conducted 2 iteration of the CRISP-DM process.
 
-\newpage
-
----
-output: pdf_document
----
-
-| **Phase**|**Task Name**  |**Schedule**  | **Resources** |**Status**
-|--|--|--|--|--|
-|Business understanding  || 3 days | All analysts |Completed|	
-|Data understanding  |  | 2 days ||In progress|
-|  | Data collection |  |	|Completed|
-|  | Data description |  | |Completed|
-|  | Data quality check |  |	|In progress|
-|  | Exploratory analysis|  |	|In progress|
-|Data preparation  |  | 2 days |	|In progress|
-|  | Selection |  |	|2 iterations|
-|  | Cleaning|  |	|2 iterations|
-|  | Construction|	|	|2 iterations|
-|  | Integration|	|	|2 iterations|
-|  | Formatting |	|	|2 iterations|
-|Modeling  |  | 5 days|	|Not started|
-|  | Generate test design|	|	||
-|  | Build model||||
-|  | Interpreter model results|  |	||
-|  | Model evaluation |  |	|	|
-|  | Refine and repeat |  |	|	|
-|Evaluation  |  | 4 days |	|Not started|
-|  | Assessment of results  |	|	||
-|  | Review of process| |	||
-|  | Determine actions|	|	||
-|  | Refine and repeat  |	|	||
-|Deployment  |  | 1 day	|	|Not started|
-|  |Deployment plan|	|	||
-|  |Maintenance plan  |	|	||
-|  |Final report  | |	||
-|  |Review project|	|	||
-
-Table: Proposed Plan Phases
-
-```{r crisp-dm, fig.cap = "CRISP-DM Process Diagramm.", fig.align = "center", out.width = "\\textwidth", fig.pos = "!h"}
-knitr::include_graphics("../../images/CRISP-DM_Process_Diagram.png", dpi = 800)
+```{r crisp-dm, fig.cap = "CRISP-DM Process Diagramm.", fig.align = "center", out.width ="0.75\\textwidth"}
+knitr::include_graphics("../../images/CRISP-DM_Process_Diagram.png")
 ```
 
 # Potential Risks
@@ -182,8 +173,16 @@ Use of assumptions including past performance to predict future performance.  Si
 # Cost/benefit analysis
 Understanding gate performance of airlines enable airport management to proper plan airline gate assignments optimally that reduces lost revenues, maximizes the use of gate facilities and defers/avoids expansion of capex due to inefficient use. 
 
+If airlines perform as what is agreed to with an airport, then the gates are managed optimally. However, there are instances when a number of flights, get delayed or even cancelled.  There are various reasons for these delays.  It could be the weather-related, security reason, or natural calamity or sometimes it is the airline (i.e. bad plan, route did not have enough passenger, labour strike, non-payment of leases (these planes are mostly leased financed). 
+
+When there is a delay or cancellation, the impact is two-fold from the point of view of the airport.  First, customer (passenger) experience suffers.  The second is that the airport would incur both actual cost (the personnel it hired, capex spent if applicable, deicing, electricity, use of systems, etc.), revenue lost (landing fees, terminal fees), and opportunity cost (airport could have given that particular gate to another airline).
+
+From the point of the airlines, it is similar but the customer experience is more palpable than the airports.  Typically, passengers view delays as the fault of airlines not airports (unlike delays in baggage retrieval is faulted to the airport when it is actually more of the airline).  The airline also suffers financially such as cost of transporting the baggage and hotel accommodation, salaries for pilot and crew members, jet fuel costs, etc.
+
 # Conclusion
-Airports perform complex operations that involve close coordination between the airlines, passengers and airport authority. Optimizing gate operations benefit all these stakeholders; Airlines can avoid the direct cost of delays. Passengers are able to have a better airport experience. Airports are able to maximize the use of gate facilities and avoid unnecessary capital builds.
+Airports perform complex operations that involve close coordination between airlines, airport authority and passengers. Optimal gate assignment is an imperative task for airports ground operations to prevent potential delays, maintain operations with high efficiency and maximize profits. This project objective is to determine how passengers are affected by delays and cancellations. Using one of the variations of Linear Programming models based on data analysis, the goal is to maximize the number of passengers served through gates.
+Optimizing gate assignments to benefit all stakeholders can avoid direct cost of delays for Airlines, Airports are able to maximize the use of gate facilities and avoid unnecessary capital builds and passengers are able to have a better-quality airport experience.
+
 
 \newpage
 
@@ -191,10 +190,154 @@ Airports perform complex operations that involve close coordination between the 
 ```{r create_r-references}
 r_refs(file = "r-references.bib")
 ```
-
 \begingroup
 \setlength{\parindent}{-0.5in}
 \setlength{\leftskip}{0.5in}
 
 <div id = "refs"></div>
 \endgroup
+
+\newpage
+
+# Tables
+
+---
+output: pdf_document
+---
+
+| Name              | Description                                     |
+|-------------------|-------------------------------------------------|
+| Year              | 1987-2008                                       |
+| Month             | 1 - 12                                          |
+| DayofMonth        | 1 - 31                                          |
+| DayOfWeek         | 1 (Monday) - 7 (Sunday)                         |
+| DepTime           | actual departure time (local, hhmm)             |
+| CRSDepTime        | scheduled departure time (local, hhmm)          |
+| ArrTime           | actual arrival time (local, hhmm)               |
+| CRSArrTime        | scheduled arrival time (local, hhmm)            |
+| UniqueCarrier     | unique carrier code                             |
+| FlightNum         | flight number                                   |
+| TailNum           | plane tail number                               |
+| ActualElapsedTime | in minutes                                      |
+| CRSElapsedTime    | in minutes                                      |
+| AirTime           | in minutes                                      |
+| ArrDelay          | arrival delay, in minutes                       |
+| DepDelay          | departure delay, in minutes                     |
+| Origin            | origin IATA airport code                        |
+| Dest              | destination IATA airport code                   |
+| Distance          | in miles                                        |
+| TaxiIn            | taxi in time, in minutes                        |
+| TaxiOut           | taxi out time in minutes                        |
+| Cancelled         | was the flight cancelled?                       |
+| CancellationCode  | A = carrier, B = weather, C = NAS, D = security)|
+| Diverted          | 1 = yes, 0 = no                                 |
+| CarrierDelay      | in minutes                                      |
+| WeatherDelay      | in minutes                                      |
+| NASDelay          | in minutes                                      |
+| SecurityDelay     | in minutes                                      |
+| LateAircraftDelay | in minutes                                      |
+
+Table: Variable descriptions
+
+\newpage
+
+```{r numf, results = 'asis', echo = FALSE}
+flights <- read.csv("../../data/NumFlights .csv", row.names = NULL)
+library("papaja")
+apa_table(
+  flights
+  , landscape = FALSE
+  , small = TRUE
+  , caption = "Number of flights per carrier at New York John F. Kennedy Airport (JFK)."
+  , note = "JetBlue Airways (B6), Delta Air Lines Inc. (DL), Comair Inc. (OH), American Airlines Inc. (AA), Continental Air Lines Inc. (CO), American Eagle Airlines Inc. (MQ), United Air Lines Inc. (UA), Northwest Airlines Inc. (NW), US Airways Inc. (US), Mesa Airlines Inc. (YV), Atlantic Southeast Airlines (EV)"
+)
+```
+
+\newpage
+
+---
+output: pdf_document
+---
+
+| JetBlue Airways | Delay IN | Delay OUT  |
+|----------------------|----------|-----------|
+| Jan-08               | 12,802   | 35,088    |
+| Feb-08               | 59,040   | 58,630    |
+| Mar-08               | 55,435   | 62,378    |
+| Apr-08               | 25,965   | 46,178    |
+| May-08               | 16,423   | 15,769    |
+| Jun-08               | 96,536   | 57,520    |
+| Jul-08               | 115,981  | 96,075    |
+| Aug-08               | 115,300  | 109,549   |
+| Sep-08               | 3,036    | 22,868    |
+| Oct-08               | -25,549  | 6,489     |
+| Nov-08               | -13,828  | 26,594    |
+| Dec-08               | 66,061   | 87,718    |
+| | | |
+| Total                | 527,202  | 624,856   |
+
+Table: Delay trend IN/OUT in minute for the top (JetBlue Airways) carrier at JFK.
+
+\newpage
+
+---
+output: pdf_document
+---
+
+| Month  | American Airlines| JetBlue Airways | Delta Airlines  | Comair | Total|
+|--------|-----|--------|-----|--------|-------|
+| Jan-08 | 30  | 55     | 16  | 63     | 164   |
+| Feb-08 | 42  | 113    | 27  | 130    | 312   |
+| Mar-08 | 24  | 72     | 22  | 83     | 201   |
+| Apr-08 | 36  | 42     | 6   | 36     | 120   |
+| May-08 | 19  | 10     | 7   | 22     | 58    |
+| Jun-08 | 21  | 141    | 14  | 84     | 260   |
+| Jul-08 | 41  | 188    | 29  | 193    | 451   |
+| Aug-08 | 20  | 197    | 25  | 203    | 445   |
+| Sep-08 | 15  | 63     | 19  | 49     | 146   |
+| Oct-08 | 7   | 18     | 8   | 15     | 48    |
+| Nov-08 | 2   | 37     | 6   | 33     | 78    |
+| Dec-08 | 18  | 127    | 30  | 121    | 296   |
+|||||||
+| Total  | 275 | 1,063  | 209 | 1,032  | 2,579 |
+
+Table: Total Cancellations
+
+\newpage
+
+---
+output: pdf_document
+---
+
+| Phase| Task Name  | Schedule  | Resources | Status |
+|--|--|--|--|--|
+|Business understanding  || 3 days | All analysts |Completed|	
+|Data understanding  |  | 2 days | BA |In progress|
+|  | Data collection |  |	|Completed|
+|  | Data description |  | |Completed|
+|  | Data quality check |  |	|In progress|
+|  | Exploratory analysis|  |	|In progress|
+|Data preparation  |  | 2 days | BA\\Modelers	| In progress |
+|  | Selection |  |	|2 iterations|
+|  | Cleaning|  |	|2 iterations|
+|  | Construction|	|	|2 iterations|
+|  | Integration|	|	|2 iterations|
+|  | Formatting |	|	|2 iterations|
+|Modeling  |  | 5 days|Modelers|Not started|
+|  | Generate test design|	|	||
+|  | Build model||||
+|  | Interpreter model results|  |	||
+|  | Model evaluation |  |	|	|
+|  | Refine and repeat |  |All analysts	|	|
+|Evaluation  |  | 4 days |Modelers|Not started|
+|  | Assessment of results  |	|	||
+|  | Review of process| |	||
+|  | Determine actions|	|	||
+|  | Refine and repeat  |	|All analysts	||
+|Deployment  |  | 1 day	|Modelers\\PM|Not started|
+|  |Deployment plan|	|	Modelers||
+|  |Maintenance plan  |	|PM	||
+|  |Final report  | |Modelers\\PM	||
+|  |Review project|	|	PM||
+
+Table: Proposed Plan Phases
