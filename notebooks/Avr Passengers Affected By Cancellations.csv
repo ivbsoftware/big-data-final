@@ -1,0 +1,12 @@
+﻿,AIRLINE,Airline Name,Flights Total,Cancelled Flights Total,Avg Num Of Pas,Avg Total Pas,Avr Total Pass Canceled,Estimated Avr Affected Pas
+0,AA,American Airlines,14802,68,218.58,3235425.89,14863.46,0.46
+1,AS,Alaska Airlines,5744,15,160.47,921766.84,2407.12,0.26
+2,B6,Jetblue Airways,5510,11,225.16,1240655.81,2476.81,0.20
+3,DL,Delta Air Lines,12179,19,196.58,2394207.06,3735.11,0.16
+4,F9,Frontier Airlines,2280,0,154.83,353001.90,0.00,0.00
+5,HA,Hawaiian Airlines,732,5,376.45,275559.79,1882.24,0.68
+6,OO,SkyWest Airlines,36679,298,68.41,2509303.69,20386.94,0.81
+7,UA,United Airlines,52673,404,192.85,10157742.13,77909.51,0.77
+8,US,US Airways,1970,3,290.83,572929.79,872.48,0.15
+9,VX,Virgin America,18074,50,169.60,3065362.00,8480.03,0.28
+10,WN,Southwest Airlines,15892,335,144.15,2290872.20,48291.10,2.11
